@@ -23,6 +23,8 @@ website:
         text: Home
       - section: "Assignments"
         contents:
+          - href: assignments/week1-setup.qmd
+            text: "Week 1 setup tasks"
           - href: assignments/milestone1.qmd
             text: "Milestone 1"
 
