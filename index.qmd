@@ -58,7 +58,7 @@ The only **group work** is a lab activity in Week 3.
 | [Student information survey](assignments/week1-setup.qmd)                          | 1%     | W1   | Thu 2026-09-03 18:00 PT | Qualtrics           |
 | [__Lab 0a: Python__](assignments/week1-setup.qmd)                                  | 1%     | W1   | Thu 2026-09-03 18:00 PT | Gradescope          |
 | [__Lab 0b: R__](assignments/week1-setup.qmd)                                       | 1%     | W1   | Thu 2026-09-03 18:00 PT | Gradescope          |
-| [Policies](assignments/week1-setup.qmd)                                            | 1%     | W1   | Wed 2026-09-05 18:00 PT | PrairieLearn        |
+| [Policies](assignments/week1-setup.qmd)                                            | 1%     | W1   | Sat 2026-09-05 18:00 PT | PrairieLearn        |
 | [__Milestone 1__](assignments/milestone1.qmd): practice repo and terminal workflow | 19%    | W1   | Sat 2026-09-05 18:00 PT | GitHub & Gradescope |
 | __Practice 1__                                                                     | 2%     | W2   | Sat 2026-09-12 18:00 PT | PrairieLearn        |
 | __Milestone 2__: website live on GitHub Pages                                      | 25%    | W2   | Sat 2026-09-12 18:00 PT | GitHub & Gradescope |
