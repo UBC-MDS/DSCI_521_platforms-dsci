@@ -6,56 +6,37 @@ format:
     toc: true
 ---
 
-**Weight**: 5% total (1% each)
-
-**Due**: Wednesday 2026-09-09 and Thursday 2026-09-10 (see the table)
-
-**Submit to**: four different places (see the table)
+See the [assessment table](../index.qmd#assessments) on the home page
+for the weights,
+due dates,
+and where to submit each one.
 
 ## Why this page exists
 
 These five tasks are small,
-they are each worth 1%,
-and they are easy to miss because none of them are submitted the same way.
+they are each worth the same 1%,
+and they are easy to miss because no two of them are submitted the same way.
 
 They are listed here so that everything you owe in this course
 is in the one place you already look.
 Canvas remains the place with the actual links and instructions.
-This page is the checklist.
+This page tells you what each one is.
 
-Note the deadlines.
-They are **Wednesday and Thursday**,
+Note that these are due **mid-week**,
 not the usual Saturday 6 PM.
 Week 1 is front-loaded on purpose,
 so that anything broken on your machine turns up
-before Milestone 1 is due on the Saturday.
+before Milestone 1 is due at the end of the week.
 
-## The tasks
-
-| Assessment                 | Weight | Due                     | Submit to    |
-|----------------------------|--------|-------------------------|--------------|
-| Setup                      | 1%     | Wed 2026-09-09 23:59 PT | Canvas       |
-| Policies                   | 1%     | Wed 2026-09-09 23:59 PT | PrairieLearn |
-| Student information survey | 1%     | Thu 2026-09-10 18:00 PT | PrairieLearn  |
-| __Lab 0a: Python__         | 1%     | Thu 2026-09-10 18:00 PT | Gradescope   |
-| __Lab 0b: R__              | 1%     | Thu 2026-09-10 18:00 PT | Gradescope   |
-
-### Setup
+## Setup
 
 Install the MDS software stack and confirm it works.
-Submitted on Canvas.
-
-Copy/paste all the output from the mds-setup-check.sh script you run at the very end.
-
-This is graded for completion,
-if something is `MISSING` you won't loose points, but do make sure your instructor knows,
-and you know how to deal with the `MISSING` status
 
 Do this one first.
 Everything else in Week 1 assumes your machine is working,
 and this is the task that finds out whether it is.
 
-### Policies
+## Policies
 
 Read the program policies and answer the questions on PrairieLearn.
 
@@ -63,29 +44,27 @@ This is also your first time using PrairieLearn,
 which you will meet again in the weekly practice questions
 and in a graded setting in another course.
 
-### Student information survey
+## Student information survey
 
 A short survey so the teaching team knows who you are.
 
-### Lab 0a: Python and Lab 0b: R
-
-You will get these in the **UBC Github Enterprise (GHE)** account.
+## Lab 0a: Python and Lab 0b: R
 
 Two short labs,
-one per language,
-submitted to Gradescope.
+one per language.
 
 They check that your Python and R installations
-can actually run and submit work,
-not that you already know the languages.
+can actually run and submit work.
+They do not check whether you already know the languages.
 
 ## Where to look
 
-| For                                | Look at                                       |
-|------------------------------------|-----------------------------------------------|
-| Links, instructions, and materials | Canvas                                        |
-| What is due and when               | This page, or the syllabus on the [home page](../index.qmd) |
-| Lecture and office hour times      | [MDS calendar](https://ubc-mds.github.io/calendar/) |
+| For                                | Look at                                                            |
+|------------------------------------|--------------------------------------------------------------------|
+| Links, instructions, and materials | Canvas                                                             |
+| What is due and when               | The [assessment table](../index.qmd#assessments) on the home page  |
+| What each task is                  | This page                                                          |
+| Lecture and office hour times      | [MDS calendar](https://ubc-mds.github.io/calendar/)                |
 
 If something here disagrees with Canvas,
 Canvas is correct.

@@ -6,11 +6,10 @@ format:
     toc: true
 ---
 
-**Weight**: 19%
-
-**Due**: Saturday 2026-09-12, 6:00 PM PT
-
-**Submit to**: Gradescope
+See the [assessment table](../index.qmd#assessments) on the home page
+for the weight,
+due date,
+and where to submit.
 
 ## What you are doing
 
