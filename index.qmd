@@ -1,0 +1,148 @@
+---
+title: "DSCI 521: Computing Platforms for Data Science"
+---
+
+# DSCI 521: Computing Platforms for Data Science
+## Student Repo
+
+How to install, maintain, and use the data scientific software "stack".
+The Unix operating system, integrated development environments, and problem solving strategies.
+
+__Slack Channel__: Your corresponding cohort's `521_platforms-dsci` channel.
+
+## Class Meetings
+
+This course occurs during __Block 1__ in the 2026/27 school year.
+
+
+Check the [MDS calendar](https://ubc-mds.github.io/calendar/) for the lecture and office hours.
+
+*note - Attendance at office hours is optional*
+
+
+## Teaching Team
+
+At your service!
+
+### Section 1
+
+| Position                 | Name                 | Slack Handle            |
+|--------------------------|----------------------|-------------------------|
+| Lecture & Lab Instructor | Ilya Musabirov       | `@ilya`                 |
+
+
+### Section 2
+
+| Position                 | Name         | Slack Handle           |
+|--------------------------|--------------|------------------------|
+| Lecture & Lab Instructor | Daniel Chen  | `@Daniel (Instructor)` |
+
+
+## Office Hours
+
+Please check the MDS calendar.
+
+## Assessments
+
+This is a __project-based course__. Instead of standalone labs and quizzes, you build
+__one individual project__ across the block: a personal Quarto website, published to
+GitHub Pages, that you set up in Week 2 and grow every week after. Week 1 gets your
+tools working first. There are __no quizzes in this course__.
+
+The only **group work** is a lab activity in Week 3.
+
+| Assessment                                             | Weight | Week       | Due Date                | Submission          |
+|--------------------------------------------------------|--------|------------|-------------------------|---------------------|
+| Setup                                                  | 1%     | W1         | Wed 2026-09-09 23:59 PT | Canvas              |
+| Policies                                               | 1%     | W1         | Wed 2026-09-09 23:59 PT | PrairieLearn        |
+| Student information survey                             | 1%     | W1         | Thu 2026-09-10 18:00 PT | Qualtrics           |
+| __Lab 0a: Python__                                     | 1%     | W1         | Thu 2026-09-10 18:00 PT | Gradescope          |
+| __Lab 0b: R__                                          | 1%     | W1         | Thu 2026-09-10 18:00 PT | Gradescope          |
+| __Milestone 1__: practice repo and terminal workflow   | 19%    | W1         | Sat 2026-09-12 18:00 PT | GitHub & Gradescope |
+| __Practice  1__          | 2%    | W2         | Sat 2026-09-19 18:00 PT | PrairieLearn |
+| __Milestone 2__: website live on GitHub Pages          | 25%    | W2         | Sat 2026-09-19 18:00 PT | GitHub & Gradescope |
+| __Practice  2__          | 2%    | W3         | Sun 2026-09-27 18:00 PT | PrairieLearn |
+| __Group lab__: collaborative slide deck (groups of 4)  | 10%    | W3         | Sun 2026-09-27 18:00 PT | GitHub & Gradescope |
+| __Practice  3__          | 2%    | W4         | Sat 2026-10-03 18:00 PT | PrairieLearn |
+| __Milestone 3__: reproducible environments + 2 posts   | 35%    | W4         | Sat 2026-10-03 18:00 PT | GitHub & Gradescope |
+
+Note the Week 1 deadlines: **there are multiple assignments due during the week**, not the usual
+Saturday 6 PM. Week 1 is front-loaded on purpose so that you are unblocked on your tools
+before the first milestone is due.
+
+Note the Week 3 deadline: it is **Sunday**, not Saturday. That week overlaps with exam
+week in your other courses, so you get the extra day.
+
+### What each milestone will ask you to do (refer to full milestone description released every week)
+
+__Milestone 1: Get your tools working (Week 1).__ Create a public repository on your own
+github.com account, clone it, build a folder structure from the terminal, write a
+`README.md` that introduces you, and push it all back. You also screenshot your terminal
+so we can see the commands and their output. There is no code in this milestone. It is a
+practice run, so that anything broken on your machine turns up now rather than in Week 2.
+
+__Milestone 2: Publish your site (Week 2).__ This is where your real project repository
+starts. Build a Quarto website and publish it to GitHub Pages, with your introduction on
+the front page. Includes your __hello-world post__: about three paragraphs and one image
+on who you are, why you are here, and your first weeks here. Keep it short. The point is
+to get publishing working.
+
+__Group lab: Collaborative slides (Week 3).__ In groups of four you build __one__ shared
+Quarto / reveal.js deck in a shared repository, answering four questions everyone answers.
+All four of you will be editing the same deck at the same time, so you will create merge
+conflicts and you will resolve them. That is the exercise. Graded on completion.
+
+This is the only shared-write repository in the course. Your own project stays yours
+throughout. The deadline does not move if your group is short-handed.
+
+__Milestone 3: Make it reproducible (Week 4).__ Pin your project's environments, one per
+language: `uv` for Python (`pyproject.toml` and `uv.lock`) and `renv` for R. Add __two
+computational posts__, one in Quarto with R and one in Quarto with Python, each with real
+code and real output. Then clean up the site. Your `README.md` needs build instructions
+good enough that we can follow them to rebuild your site ourselves, because that is how
+this milestone is graded.
+
+### PrairieLearn practice
+
+Every week, during lab, you work through a short set of PrairieLearn questions
+(drawn from past exam and assignment banks) that
+bridge the lecture material into that week's milestone. These are graded on
+__completion__, not correctness. They are also how you get comfortable with PrairieLearn
+before you meet it in a graded setting in another course.
+
+### How to submit
+
+Each milestone and the group lab are submitted in two places:
+
+1. __GitHub__: your work, pushed to your repository.
+2. __Gradescope__: a PDF containing the URL of your repository and the URL of your
+   rendered site.
+
+Milestone 1 has no site yet, so its PDF only needs the repository URL.
+
+Tip: Use the lecture learning objectives as beacons. Each week's objectives are what that
+week's milestone asks you to demonstrate.
+
+## Use of Generative Artificial Intelligence Tools 
+
+This course is intended to help you acquire foundational knowledge and skills related to the tools used in the program and to data science practice. While you are permitted to use artificial intelligence tools, including generative AI, to gather information, review concepts, or help debug assignments, we expect you to make a reasonable effort to complete the assignments on your own, ask questions in the lab and during office hours, and discuss with your peers before you turn to GenAI for answers. Social learning is one of the big components of MDS, and we encourage you to start participating in it early on. You are ultimately accountable for the work you submit, and any content generated or supported by an artificial intelligence tool must be cited appropriately.
+
+## Course Learning Outcomes
+
+See the course [lecture book](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/)
+
+## Syllabus
+
+This document
+
+## Attributions
+
+See the course [lecture book](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/)
+
+## License
+
+Software licensed under the
+[MIT License](https://spdx.org/licenses/MIT.html),
+non-software content licensed under the
+[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+See the [license file](LICENSE.md) for more information.

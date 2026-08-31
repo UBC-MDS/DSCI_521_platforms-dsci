@@ -1,0 +1,35 @@
+project:
+  type: website
+
+website:
+  title: "DSCI 521: Computing Platforms for Data Science (Students)"
+  repo-url: https://github.com/UBC-MDS/DSCI_521_platforms-dsci
+  repo-branch: main
+  repo-actions: [edit]
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/
+        text: Textbook
+    right:
+      - icon: github
+        href: https://github.com/UBC-MDS/DSCI_521_platforms-dsci
+        aria-label: "Course GitHub repository"
+  sidebar:
+    style: floating
+    contents:
+      - href: index.qmd
+        text: Home
+      - section: "Assignments"
+        contents:
+          - href: assignments/milestone1.qmd
+            text: "Milestone 1"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
