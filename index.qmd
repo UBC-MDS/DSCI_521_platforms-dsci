@@ -54,20 +54,20 @@ The only **group work** is a lab activity in Week 3.
 
 | Assessment                                                                         | Weight | Week | Due Date                | Submission          |
 |------------------------------------------------------------------------------------|--------|------|-------------------------|---------------------|
-| [Setup](assignments/week1-setup.qmd)                                               | 1%     | W1   | Wed 2026-09-09 23:59 PT | Canvas              |
-| [Policies](assignments/week1-setup.qmd)                                            | 1%     | W1   | Wed 2026-09-09 23:59 PT | PrairieLearn        |
-| [Student information survey](assignments/week1-setup.qmd)                          | 1%     | W1   | Thu 2026-09-10 18:00 PT | Qualtrics           |
-| [__Lab 0a: Python__](assignments/week1-setup.qmd)                                  | 1%     | W1   | Thu 2026-09-10 18:00 PT | Gradescope          |
-| [__Lab 0b: R__](assignments/week1-setup.qmd)                                       | 1%     | W1   | Thu 2026-09-10 18:00 PT | Gradescope          |
-| [__Milestone 1__](assignments/milestone1.qmd): practice repo and terminal workflow | 19%    | W1   | Sat 2026-09-12 18:00 PT | GitHub & Gradescope |
-| __Practice 1__                                                                     | 2%     | W2   | Sat 2026-09-19 18:00 PT | PrairieLearn        |
-| __Milestone 2__: website live on GitHub Pages                                      | 25%    | W2   | Sat 2026-09-19 18:00 PT | GitHub & Gradescope |
-| __Practice 2__                                                                     | 2%     | W3   | Sun 2026-09-27 18:00 PT | PrairieLearn        |
-| __Group lab__: collaborative slide deck (groups of 4)                              | 10%    | W3   | Sun 2026-09-27 18:00 PT | GitHub & Gradescope |
-| __Practice 3__                                                                     | 2%     | W4   | Sat 2026-10-03 18:00 PT | PrairieLearn        |
-| __Milestone 3__: reproducible environments + 2 posts                               | 35%    | W4   | Sat 2026-10-03 18:00 PT | GitHub & Gradescope |
+| [Setup](assignments/week1-setup.qmd)                                               | 1%     | W1   | Wed 2026-09-02 23:59 PT | Canvas              |
+| [Policies](assignments/week1-setup.qmd)                                            | 1%     | W1   | Wed 2026-09-02 23:59 PT | PrairieLearn        |
+| [Student information survey](assignments/week1-setup.qmd)                          | 1%     | W1   | Thu 2026-09-03 18:00 PT | Qualtrics           |
+| [__Lab 0a: Python__](assignments/week1-setup.qmd)                                  | 1%     | W1   | Thu 2026-09-03 18:00 PT | Gradescope          |
+| [__Lab 0b: R__](assignments/week1-setup.qmd)                                       | 1%     | W1   | Thu 2026-09-03 18:00 PT | Gradescope          |
+| [__Milestone 1__](assignments/milestone1.qmd): practice repo and terminal workflow | 19%    | W1   | Sat 2026-09-05 18:00 PT | GitHub & Gradescope |
+| __Practice 1__                                                                     | 2%     | W2   | Sat 2026-09-12 18:00 PT | PrairieLearn        |
+| __Milestone 2__: website live on GitHub Pages                                      | 25%    | W2   | Sat 2026-09-12 18:00 PT | GitHub & Gradescope |
+| __Practice 2__                                                                     | 2%     | W3   | Sun 2026-09-20 18:00 PT | PrairieLearn        |
+| __Group lab__: collaborative slide deck (groups of 4)                              | 10%    | W3   | Sun 2026-09-20 18:00 PT | GitHub & Gradescope |
+| __Practice 3__                                                                     | 2%     | W4   | Sat 2026-09-26 18:00 PT | PrairieLearn        |
+| __Milestone 3__: reproducible environments + 2 posts                               | 35%    | W4   | Sat 2026-09-26 18:00 PT | GitHub & Gradescope |
 
-Note the Week 1 deadlines: **there are multiple assignments due during the week**, not the usual
+Note the Week 1 deadlines: **there are multiple assignments due during the week** in addition to the regular
 Saturday 6 PM. Week 1 is front-loaded on purpose so that you are unblocked on your tools
 before the first milestone is due.
 
