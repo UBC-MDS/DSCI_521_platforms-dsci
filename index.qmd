@@ -2,13 +2,14 @@
 title: "DSCI 521: Computing Platforms for Data Science"
 ---
 
-# DSCI 521: Computing Platforms for Data Science
+Student and assignment materials for UBC MDS's DSCI 521: Computing Platforms for Data Science course.
+
 ## Student Repo
 
 How to install, maintain, and use the data scientific software "stack".
 The Unix operating system, integrated development environments, and problem solving strategies.
 
-__Slack Channel__: Your corresponding cohort's `521_platforms-dsci` channel.
+__Slack Channel__: Your cohort's `521_platforms-dsci` channel.
 
 ## Class Meetings
 
