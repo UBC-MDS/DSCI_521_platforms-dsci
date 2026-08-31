@@ -1,0 +1,253 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DSCI 521: Computing Platforms for Data Science",
+    "section": "",
+    "text": "How to install, maintain, and use the data scientific software “stack”. The Unix operating system, integrated development environments, and problem solving strategies.\nSlack Channel: Your corresponding cohort’s 521_platforms-dsci channel.\n\n\n\nThis course occurs during Block 1 in the 2026/27 school year.\nCheck the MDS calendar for the lecture and office hours.\nnote - Attendance at office hours is optional\n\n\n\nAt your service!\n\n\n\n\n\n\n\n\n\n\nPosition\nName\nSlack Handle\n\n\n\n\nLecture & Lab Instructor\nIlya Musabirov\n@ilya\n\n\n\n\n\n\n\n\n\nPosition\nName\nSlack Handle\n\n\n\n\nLecture & Lab Instructor\nDaniel Chen\n@Daniel (Instructor)\n\n\n\n\n\n\n\nPlease check the MDS calendar.\n\n\n\nThis is a project-based course. Instead of standalone labs and quizzes, you build one individual project across the block: a personal Quarto website, published to GitHub Pages, that you set up in Week 2 and grow every week after. Week 1 gets your tools working first. There are no quizzes in this course.\nThe only group work is a lab activity in Week 3.\n\n\n\n\n\n\n\n\n\n\nAssessment\nWeight\nWeek\nDue Date\nSubmission\n\n\n\n\nSetup\n1%\nW1\nWed 2026-09-09 23:59 PT\nCanvas\n\n\nPolicies\n1%\nW1\nWed 2026-09-09 23:59 PT\nPrairieLearn\n\n\nStudent information survey\n1%\nW1\nThu 2026-09-10 18:00 PT\nQualtrics\n\n\nLab 0a: Python\n1%\nW1\nThu 2026-09-10 18:00 PT\nGradescope\n\n\nLab 0b: R\n1%\nW1\nThu 2026-09-10 18:00 PT\nGradescope\n\n\nMilestone 1: practice repo and terminal workflow\n19%\nW1\nSat 2026-09-12 18:00 PT\nGitHub & Gradescope\n\n\nPractice 1\n2%\nW2\nSat 2026-09-19 18:00 PT\nPrairieLearn\n\n\nMilestone 2: website live on GitHub Pages\n25%\nW2\nSat 2026-09-19 18:00 PT\nGitHub & Gradescope\n\n\nPractice 2\n2%\nW3\nSun 2026-09-27 18:00 PT\nPrairieLearn\n\n\nGroup lab: collaborative slide deck (groups of 4)\n10%\nW3\nSun 2026-09-27 18:00 PT\nGitHub & Gradescope\n\n\nPractice 3\n2%\nW4\nSat 2026-10-03 18:00 PT\nPrairieLearn\n\n\nMilestone 3: reproducible environments + 2 posts\n35%\nW4\nSat 2026-10-03 18:00 PT\nGitHub & Gradescope\n\n\n\nNote the Week 1 deadlines: there are multiple assignments due during the week, not the usual Saturday 6 PM. Week 1 is front-loaded on purpose so that you are unblocked on your tools before the first milestone is due.\nNote the Week 3 deadline: it is Sunday, not Saturday. That week overlaps with exam week in your other courses, so you get the extra day.\n\n\nMilestone 1: Get your tools working (Week 1). Create a public repository on your own github.com account, clone it, build a folder structure from the terminal, write a README.md that introduces you, and push it all back. You also screenshot your terminal so we can see the commands and their output. There is no code in this milestone. It is a practice run, so that anything broken on your machine turns up now rather than in Week 2.\nMilestone 2: Publish your site (Week 2). This is where your real project repository starts. Build a Quarto website and publish it to GitHub Pages, with your introduction on the front page. Includes your hello-world post: about three paragraphs and one image on who you are, why you are here, and your first weeks here. Keep it short. The point is to get publishing working.\nGroup lab: Collaborative slides (Week 3). In groups of four you build one shared Quarto / reveal.js deck in a shared repository, answering four questions everyone answers. All four of you will be editing the same deck at the same time, so you will create merge conflicts and you will resolve them. That is the exercise. Graded on completion.\nThis is the only shared-write repository in the course. Your own project stays yours throughout. The deadline does not move if your group is short-handed.\nMilestone 3: Make it reproducible (Week 4). Pin your project’s environments, one per language: uv for Python (pyproject.toml and uv.lock) and renv for R. Add two computational posts, one in Quarto with R and one in Quarto with Python, each with real code and real output. Then clean up the site. Your README.md needs build instructions good enough that we can follow them to rebuild your site ourselves, because that is how this milestone is graded.\n\n\n\nEvery week, during lab, you work through a short set of PrairieLearn questions (drawn from past exam and assignment banks) that bridge the lecture material into that week’s milestone. These are graded on completion, not correctness. They are also how you get comfortable with PrairieLearn before you meet it in a graded setting in another course.\n\n\n\nEach milestone and the group lab are submitted in two places:\n\nGitHub: your work, pushed to your repository.\nGradescope: a PDF containing the URL of your repository and the URL of your rendered site.\n\nMilestone 1 has no site yet, so its PDF only needs the repository URL.\nTip: Use the lecture learning objectives as beacons. Each week’s objectives are what that week’s milestone asks you to demonstrate.\n\n\n\n\nThis course is intended to help you acquire foundational knowledge and skills related to the tools used in the program and to data science practice. While you are permitted to use artificial intelligence tools, including generative AI, to gather information, review concepts, or help debug assignments, we expect you to make a reasonable effort to complete the assignments on your own, ask questions in the lab and during office hours, and discuss with your peers before you turn to GenAI for answers. Social learning is one of the big components of MDS, and we encourage you to start participating in it early on. You are ultimately accountable for the work you submit, and any content generated or supported by an artificial intelligence tool must be cited appropriately.\n\n\n\nSee the course lecture book\n\n\n\nThis document\n\n\n\nSee the course lecture book\n\n\n\nSoftware licensed under the MIT License, non-software content licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License. See the license file for more information.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#student-repo",
+    "href": "index.html#student-repo",
+    "title": "DSCI 521: Computing Platforms for Data Science",
+    "section": "",
+    "text": "How to install, maintain, and use the data scientific software “stack”. The Unix operating system, integrated development environments, and problem solving strategies.\nSlack Channel: Your corresponding cohort’s 521_platforms-dsci channel.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#class-meetings",
+    "href": "index.html#class-meetings",
+    "title": "DSCI 521: Computing Platforms for Data Science",
+    "section": "",
+    "text": "This course occurs during Block 1 in the 2026/27 school year.\nCheck the MDS calendar for the lecture and office hours.\nnote - Attendance at office hours is optional",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#teaching-team",
+    "href": "index.html#teaching-team",
+    "title": "DSCI 521: Computing Platforms for Data Science",
+    "section": "",
+    "text": "At your service!\n\n\n\n\n\n\n\n\n\n\nPosition\nName\nSlack Handle\n\n\n\n\nLecture & Lab Instructor\nIlya Musabirov\n@ilya\n\n\n\n\n\n\n\n\n\nPosition\nName\nSlack Handle\n\n\n\n\nLecture & Lab Instructor\nDaniel Chen\n@Daniel (Instructor)",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#office-hours",
+    "href": "index.html#office-hours",
+    "title": "DSCI 521: Computing Platforms for Data Science",
+    "section": "",
+    "text": "Please check the MDS calendar.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#assessments",
+    "href": "index.html#assessments",
+    "title": "DSCI 521: Computing Platforms for Data Science",
+    "section": "",
+    "text": "This is a project-based course. Instead of standalone labs and quizzes, you build one individual project across the block: a personal Quarto website, published to GitHub Pages, that you set up in Week 2 and grow every week after. Week 1 gets your tools working first. There are no quizzes in this course.\nThe only group work is a lab activity in Week 3.\n\n\n\n\n\n\n\n\n\n\nAssessment\nWeight\nWeek\nDue Date\nSubmission\n\n\n\n\nSetup\n1%\nW1\nWed 2026-09-09 23:59 PT\nCanvas\n\n\nPolicies\n1%\nW1\nWed 2026-09-09 23:59 PT\nPrairieLearn\n\n\nStudent information survey\n1%\nW1\nThu 2026-09-10 18:00 PT\nQualtrics\n\n\nLab 0a: Python\n1%\nW1\nThu 2026-09-10 18:00 PT\nGradescope\n\n\nLab 0b: R\n1%\nW1\nThu 2026-09-10 18:00 PT\nGradescope\n\n\nMilestone 1: practice repo and terminal workflow\n19%\nW1\nSat 2026-09-12 18:00 PT\nGitHub & Gradescope\n\n\nPractice 1\n2%\nW2\nSat 2026-09-19 18:00 PT\nPrairieLearn\n\n\nMilestone 2: website live on GitHub Pages\n25%\nW2\nSat 2026-09-19 18:00 PT\nGitHub & Gradescope\n\n\nPractice 2\n2%\nW3\nSun 2026-09-27 18:00 PT\nPrairieLearn\n\n\nGroup lab: collaborative slide deck (groups of 4)\n10%\nW3\nSun 2026-09-27 18:00 PT\nGitHub & Gradescope\n\n\nPractice 3\n2%\nW4\nSat 2026-10-03 18:00 PT\nPrairieLearn\n\n\nMilestone 3: reproducible environments + 2 posts\n35%\nW4\nSat 2026-10-03 18:00 PT\nGitHub & Gradescope\n\n\n\nNote the Week 1 deadlines: there are multiple assignments due during the week, not the usual Saturday 6 PM. Week 1 is front-loaded on purpose so that you are unblocked on your tools before the first milestone is due.\nNote the Week 3 deadline: it is Sunday, not Saturday. That week overlaps with exam week in your other courses, so you get the extra day.\n\n\nMilestone 1: Get your tools working (Week 1). Create a public repository on your own github.com account, clone it, build a folder structure from the terminal, write a README.md that introduces you, and push it all back. You also screenshot your terminal so we can see the commands and their output. There is no code in this milestone. It is a practice run, so that anything broken on your machine turns up now rather than in Week 2.\nMilestone 2: Publish your site (Week 2). This is where your real project repository starts. Build a Quarto website and publish it to GitHub Pages, with your introduction on the front page. Includes your hello-world post: about three paragraphs and one image on who you are, why you are here, and your first weeks here. Keep it short. The point is to get publishing working.\nGroup lab: Collaborative slides (Week 3). In groups of four you build one shared Quarto / reveal.js deck in a shared repository, answering four questions everyone answers. All four of you will be editing the same deck at the same time, so you will create merge conflicts and you will resolve them. That is the exercise. Graded on completion.\nThis is the only shared-write repository in the course. Your own project stays yours throughout. The deadline does not move if your group is short-handed.\nMilestone 3: Make it reproducible (Week 4). Pin your project’s environments, one per language: uv for Python (pyproject.toml and uv.lock) and renv for R. Add two computational posts, one in Quarto with R and one in Quarto with Python, each with real code and real output. Then clean up the site. Your README.md needs build instructions good enough that we can follow them to rebuild your site ourselves, because that is how this milestone is graded.\n\n\n\nEvery week, during lab, you work through a short set of PrairieLearn questions (drawn from past exam and assignment banks) that bridge the lecture material into that week’s milestone. These are graded on completion, not correctness. They are also how you get comfortable with PrairieLearn before you meet it in a graded setting in another course.\n\n\n\nEach milestone and the group lab are submitted in two places:\n\nGitHub: your work, pushed to your repository.\nGradescope: a PDF containing the URL of your repository and the URL of your rendered site.\n\nMilestone 1 has no site yet, so its PDF only needs the repository URL.\nTip: Use the lecture learning objectives as beacons. Each week’s objectives are what that week’s milestone asks you to demonstrate.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#use-of-generative-artificial-intelligence-tools",
+    "href": "index.html#use-of-generative-artificial-intelligence-tools",
+    "title": "DSCI 521: Computing Platforms for Data Science",
+    "section": "",
+    "text": "This course is intended to help you acquire foundational knowledge and skills related to the tools used in the program and to data science practice. While you are permitted to use artificial intelligence tools, including generative AI, to gather information, review concepts, or help debug assignments, we expect you to make a reasonable effort to complete the assignments on your own, ask questions in the lab and during office hours, and discuss with your peers before you turn to GenAI for answers. Social learning is one of the big components of MDS, and we encourage you to start participating in it early on. You are ultimately accountable for the work you submit, and any content generated or supported by an artificial intelligence tool must be cited appropriately.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#course-learning-outcomes",
+    "href": "index.html#course-learning-outcomes",
+    "title": "DSCI 521: Computing Platforms for Data Science",
+    "section": "",
+    "text": "See the course lecture book",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#syllabus",
+    "href": "index.html#syllabus",
+    "title": "DSCI 521: Computing Platforms for Data Science",
+    "section": "",
+    "text": "This document",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#attributions",
+    "href": "index.html#attributions",
+    "title": "DSCI 521: Computing Platforms for Data Science",
+    "section": "",
+    "text": "See the course lecture book",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "DSCI 521: Computing Platforms for Data Science",
+    "section": "",
+    "text": "Software licensed under the MIT License, non-software content licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License. See the license file for more information.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "License",
+    "section": "",
+    "text": "This repository contains two kinds of material, and each is licensed differently.\nIf you reuse anything from this repository, apply the license that matches the kind of material you are reusing."
+  },
+  {
+    "objectID": "LICENSE.html#mit-license-code",
+    "href": "LICENSE.html#mit-license-code",
+    "title": "License",
+    "section": "MIT License (code)",
+    "text": "MIT License (code)\nCopyright (c) 2026 Master of Data Science, University of British Columbia\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  {
+    "objectID": "LICENSE.html#creative-commons-attribution-noncommercial-sharealike-4.0-international-prose",
+    "href": "LICENSE.html#creative-commons-attribution-noncommercial-sharealike-4.0-international-prose",
+    "title": "License",
+    "section": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (prose)",
+    "text": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (prose)\nCopyright (c) 2026 Master of Data Science, University of British Columbia\nNon-software content in this repository is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).\nYou are free to share and adapt this material, provided that you:\n\nAttribution - give appropriate credit, link to the license, and indicate if changes were made.\nNonCommercial - do not use the material for commercial purposes.\nShareAlike - if you remix or build upon the material, distribute your contributions under this same license.\n\nThe full legal text is available at https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en."
+  },
+  {
+    "objectID": "assignments/milestone1.html",
+    "href": "assignments/milestone1.html",
+    "title": "DSCI 521 Milestone 1",
+    "section": "",
+    "text": "Weight: 19%\nDue: Saturday 2026-09-12, 6:00 PM PT\nSubmit to: Gradescope",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "assignments/milestone1.html#what-you-are-doing",
+    "href": "assignments/milestone1.html#what-you-are-doing",
+    "title": "DSCI 521 Milestone 1",
+    "section": "What you are doing",
+    "text": "What you are doing\nYou are building one project across this course, and it will live in a repository you create in Milestone 2.\nThis milestone is a practice run for that. You set up a folder structure here, practise the terminal commands once, and find out now if something on your machine is not working. That way, when you start the real project repository next week, your tools are already sorted out.\nThere is no code in this milestone, just some practice with terminal commands.\nBy the end of this milestone you will have:\n\nA folder structure you made from the terminal.\nA README.md that introduces you.\nScreenshots of your terminal, showing how you did it.\n\nNothing needs to look good yet. The point is to get the pieces in place.\nEverything here comes from the Week 1 lecture. Each step below links to the part of the textbook that covers it.\n\nLecture 1: Introduction to MDS software and Bash",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "assignments/milestone1.html#read-this-before-you-open-your-terminal",
+    "href": "assignments/milestone1.html#read-this-before-you-open-your-terminal",
+    "title": "DSCI 521 Milestone 1",
+    "section": "Read this before you open your terminal",
+    "text": "Read this before you open your terminal\nDo all of the terminal work below in one terminal window, and keep it open until you finish the milestone. Do not close it and reopen it partway through.\nAt the end, you will take screenshots of that terminal window. We look at two things in those screenshots:\n\nThe commands you ran.\nThe output those commands produced.\n\nThat is why the window has to stay open. If you close it, you lose the output, and history on its own will not be enough.\n\nYou do not need to clean anything up\nYour terminal will be messy, and that is fine. We are not grading it for neatness.\n\nTypos do not count against you.\nExtra commands do not count against you.\nStarting a step over does not count against you.\nCommands that failed do not count against you.\n\nDo not retype your session to make it look tidy. We would rather see what actually happened.\nThe one thing to check before you screenshot: make sure there is no password, token, or other private information visible in the window. If there is, crop it out or cover it.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "assignments/milestone1.html#step-1-make-the-folder-structure",
+    "href": "assignments/milestone1.html#step-1-make-the-folder-structure",
+    "title": "DSCI 521 Milestone 1",
+    "section": "Step 1: Make the folder structure",
+    "text": "Step 1: Make the folder structure\nTextbook:\n\nWorking with files and directories\nNaming guidelines\nShell commands for navigating and manipulating the filesystem\n\nMake these folders with the mkdir command in your terminal.\nDo not use Finder, Windows File Explorer, a “New Folder” button, or the file panel in your editor. Being able to do this from the command line is the point of the step, so that is what we are looking for.\n\nCreate a folder structure for 521. Use mkdir to create your folder for mds materials (e.g. mds) and a folder inside it for our course (e.g. 521). If they already exist, use cd to navigate to them. Inside of your 521 folder, make a milestone 1 folder named DSCI_521-milestone_1. Use cd to open it.\nFrom the top level of your milestone 1 folder, use mkdir to create these three folders:\ndata\ndocuments\nscreenshots\nRun ls to list the folder you are in, and confirm that all three are there.\n\nDo not skip the ls. Your terminal screenshot in Step 3 needs to show both the mkdir commands and the ls output. If the folders show up with no mkdir behind them, this step is not complete.\nTwo things to keep in mind:\n\nFolder names are case sensitive. Use the exact names above.\ndata and documents stay empty this week. They will exist on your own computer, and ls will show them. That is expected, and it is not something you need to fix. You are practising skills in this assignment. We will build on these skills in later assignments.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "assignments/milestone1.html#step-2-write-your-readme",
+    "href": "assignments/milestone1.html#step-2-write-your-readme",
+    "title": "DSCI 521 Milestone 1",
+    "section": "Step 2: Write your README",
+    "text": "Step 2: Write your README\nTextbook:\n\nCreating a file\nEditing a file in VS Code\n\nCreate README.md at the top level of your milestone 1 folder (e.g. code README.md) and add:\n\nA title line with the course and milestone.\nYour name.\nA short paragraph introducing yourself. Three or four sentences is plenty. Say where you came from, what you studied or worked on before MDS, and what you are hoping to get out of the program.\nOne or two sentences saying what is in this milestone.\n\nWrite this for a stranger who reads your README and wonders who you are. You will reuse this paragraph on your website in Milestone 2, so it is worth a few minutes now.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "assignments/milestone1.html#step-3-screenshot-your-terminal-work",
+    "href": "assignments/milestone1.html#step-3-screenshot-your-terminal-work",
+    "title": "DSCI 521 Milestone 1",
+    "section": "Step 3: Screenshot your terminal work",
+    "text": "Step 3: Screenshot your terminal work\nTextbook: Seeing the history of commands\n\nScroll up through the window and take screenshots of your commands and their output, from your first mkdir onward. Take as many as you need to cover the whole session. Name them terminal-1.png, terminal-2.png, and so on.\nThen run:\nhistory\nTake a screenshot of that output too, and name it history.png. If the list is too long for one screen, use history-1.png, history-2.png, and so on.\nSave all of these screenshots in the screenshots folder you made in Step 1.\n\nRemember from earlier: mess is fine, private information is not.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "assignments/milestone1.html#step-4-submit",
+    "href": "assignments/milestone1.html#step-4-submit",
+    "title": "DSCI 521 Milestone 1",
+    "section": "Step 4: Submit",
+    "text": "Step 4: Submit\nSubmit your README.md file and the screenshots you made on Gradescope.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "assignments/milestone1.html#before-you-submit-check",
+    "href": "assignments/milestone1.html#before-you-submit-check",
+    "title": "DSCI 521 Milestone 1",
+    "section": "Before you submit, check",
+    "text": "Before you submit, check\n\nREADME.md has your name and your introduction paragraph.\nYou made the folders with mkdir, not with Finder or File Explorer, and your screenshot shows those commands.\nOn your computer, ls shows data, documents, and screenshots.\nOn your computer, ls data and ls documents both list nothing, because those folders are still empty.\nscreenshots holds your terminal screenshots and your history screenshot.\nThe terminal screenshots show your commands and their output.\nNo passwords or private information are visible in any screenshot.\nYour screenshots and README.md are uploaded on Gradescope.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "assignments/milestone1.html#grading",
+    "href": "assignments/milestone1.html#grading",
+    "title": "DSCI 521 Milestone 1",
+    "section": "Grading",
+    "text": "Grading\n\n\n\n\n\n\n\nItem\nMarks\n\n\n\n\nREADME with your introduction paragraph\n5\n\n\nFolders made with mkdir, with the ls output to confirm\n5\n\n\nTerminal screenshots showing commands and output\n5\n\n\nHistory screenshot\n4\n\n\nTotal\n19",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Milestone 1"
+    ]
+  },
+  {
+    "objectID": "assignments/milestone1.html#if-you-get-stuck",
+    "href": "assignments/milestone1.html#if-you-get-stuck",
+    "title": "DSCI 521 Milestone 1",
+    "section": "If you get stuck",
+    "text": "If you get stuck\nTextbook: Asking Effective Questions\nAsk in the 521_platforms-dsci Slack channel or come to office hours. Post the command you ran and the error message you got, not just “it did not work”.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Milestone 1"
+    ]
+  }
+]
