@@ -57,6 +57,12 @@ They check that your Python and R installations
 can actually run and submit work.
 They do not check whether you already know the languages.
 
+:::{.callout-warning}
+## Upload the assignment document
+
+Also remember to upload the corresponding assignment document along with your html, pdf docs.
+:::
+
 ## Where to look
 
 | For                                | Look at                                                            |
