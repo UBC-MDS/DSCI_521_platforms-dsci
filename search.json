@@ -291,7 +291,7 @@
     "href": "assignments/milestone1.html#step-4-submit",
     "title": "DSCI 521 Milestone 1",
     "section": "Step 4: Submit",
-    "text": "Step 4: Submit\nSubmit your README.md file and the screenshots you made on Gradescope.",
+    "text": "Step 4: Submit\nConvert your README.md file to PDF (any way that works for you, e.g. by running quarto render README.md --to typst), and then submit the result and the screenshots you made on Gradescope.",
     "crumbs": [
       "Home",
       "Assignments",
@@ -303,7 +303,7 @@
     "href": "assignments/milestone1.html#before-you-submit-check",
     "title": "DSCI 521 Milestone 1",
     "section": "Before you submit, check",
-    "text": "Before you submit, check\n\nREADME.md has your name and your introduction paragraph.\nYou made the folders with mkdir, not with Finder or File Explorer, and your screenshot shows those commands.\nOn your computer, ls shows data, documents, and screenshots.\nOn your computer, ls data and ls documents both list nothing, because those folders are still empty.\nscreenshots holds your terminal screenshots and your history screenshot.\nThe terminal screenshots show your commands and their output.\nNo passwords or private information are visible in any screenshot.\nYour screenshots and README.md are uploaded on Gradescope.",
+    "text": "Before you submit, check\n\nREADME.md pdf has your name and your introduction paragraph.\nYou made the folders with mkdir, not with Finder or File Explorer, and your screenshot shows those commands.\nOn your computer, ls shows data, documents, and screenshots.\nOn your computer, ls data and ls documents both list nothing, because those folders are still empty.\nscreenshots holds your terminal screenshots and your history screenshot.\nThe terminal screenshots show your commands and their output.\nNo passwords or private information are visible in any screenshot.\nYour screenshots and a pdf generated from README.md are uploaded on Gradescope.",
     "crumbs": [
       "Home",
       "Assignments",
