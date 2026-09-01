@@ -267,7 +267,7 @@
     "href": "assignments/milestone1.html#step-2-write-your-readme",
     "title": "DSCI 521 Milestone 1",
     "section": "Step 2: Write your README",
-    "text": "Step 2: Write your README\nTextbook:\n\nCreating a file\nEditing a file in VS Code\n\nCreate README.md at the top level of your milestone 1 folder (e.g. code README.md) and add:\n\nA title line with the course and milestone.\nYour name.\nA short paragraph introducing yourself. Three or four sentences is plenty. Say where you came from, what you studied or worked on before MDS, and what you are hoping to get out of the program.\nOne or two sentences saying what is in this milestone.\n\nWrite this for a stranger who reads your README and wonders who you are. You will reuse this paragraph on your website in Milestone 2, so it is worth a few minutes now.",
+    "text": "Step 2: Write your README\nTextbook:\n\nCreating a file\nEditing a file in VS Code\n\nCreate README.md at the top level of your milestone 1 folder (e.g. code README.md if you have VS Code installed, positron README.md if you prefer Positron) and add:\n\nA title line with the course and milestone.\nYour name.\nA short paragraph introducing yourself. Three or four sentences is plenty. Say where you came from, what you studied or worked on before MDS, and what you are hoping to get out of the program.\nOne or two sentences saying what is in this milestone.\n\nWrite this for a stranger who reads your README and wonders who you are. You will reuse this paragraph on your website in Milestone 2, so it is worth a few minutes now.",
     "crumbs": [
       "Home",
       "Assignments",
