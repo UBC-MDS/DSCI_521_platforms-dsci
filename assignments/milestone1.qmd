@@ -178,6 +178,7 @@ Textbook: [Seeing the history of commands](https://ubc-mds.github.io/DSCI_521_pl
    and name it `history.png`.
    If the list is too long for one screen,
    use `history-1.png`, `history-2.png`, and so on.
+3b. You need a screenshot of README.md in your editor as well.
 4. Save all of these screenshots in the `screenshots` folder you made in Step 1.
 
 Remember from earlier:
@@ -187,11 +188,11 @@ private information is not.
 
 ## Step 4: Submit
 
-Convert your README.md file to PDF (any way that works for you, e.g. by running `quarto render README.md --to typst`), and then submit the result and the screenshots you made on Gradescope.
+Submit you screenshots (one for README.md, all for the terminal and history)  on Gradescope.
 
 ## Before you submit, check
 
-- [ ] `README.md` pdf has your name and your introduction paragraph.
+- [ ] `README.md` has your name and your introduction paragraph.
 - [ ] You made the folders with `mkdir`,
       not with Finder or File Explorer,
       and your screenshot shows those commands.
@@ -200,16 +201,16 @@ Convert your README.md file to PDF (any way that works for you, e.g. by running 
 - [ ] On your computer,
       `ls data` and `ls documents` both list nothing,
       because those folders are still empty.
-- [ ] `screenshots` holds your terminal screenshots and your history screenshot.
+- [ ] `screenshots` holds your terminal screenshots and your history screenshot (and possibly your README.md screenshot).
 - [ ] The terminal screenshots show your commands *and* their output.
 - [ ] No passwords or private information are visible in any screenshot.
-- [ ] Your screenshots and a pdf generated from README.md are uploaded on Gradescope.
+- [ ] Your screenshots for terminal commands, history, and README.md are uploaded on Gradescope.
 
 ## Grading
 
 | Item                                                        | Marks  |
 |-------------------------------------------------------------|--------|
-| README with your introduction paragraph                      | 5      |
+| README.md with your introduction paragraph                      | 5      |
 | Folders made with `mkdir`, with the `ls` output to confirm    | 5      |
 | Terminal screenshots showing commands and output             | 5      |
 | History screenshot                                           | 4      |
