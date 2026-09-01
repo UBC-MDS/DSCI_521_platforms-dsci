@@ -52,7 +52,7 @@
     "href": "assignments/week1-setup.html#student-information-survey",
     "title": "DSCI 521 Week 1 Setup Tasks",
     "section": "Student information survey",
-    "text": "Student information survey\nA short survey so the teaching team knows who you are.",
+    "text": "Student information survey\nA short survey allowing teaching team to gather you github usernames and other necessary info for subsequent courses. Find it on PrairieLearn.",
     "crumbs": [
       "Home",
       "Assignments",
@@ -64,7 +64,7 @@
     "href": "assignments/week1-setup.html#lab-0a-python-and-lab-0b-r",
     "title": "DSCI 521 Week 1 Setup Tasks",
     "section": "Lab 0a: Python and Lab 0b: R",
-    "text": "Lab 0a: Python and Lab 0b: R\nTwo short labs, one per language.\nThey check that your Python and R installations can actually run and submit work. They do not check whether you already know the languages.\n\n\n\n\n\n\nWarningUpload the assignment document\n\n\n\nAlso remember to upload the corresponding assignment document along with your html, pdf docs.",
+    "text": "Lab 0a: Python and Lab 0b: R\nTwo short labs covered during the orientation (find the recording in pins of the course slack channel), one per language.\nThey check that your Python and R installations can actually run and submit work. They do not check whether you already know the languages.\nJupyterLab orientation chapter and RStudio orientation chapter will be helpful for these labs.\n\n\n\n\n\n\nWarningUpload the assignment document\n\n\n\nAlso remember to upload the corresponding assignment document along with your html, pdf docs.",
     "crumbs": [
       "Home",
       "Assignments",
@@ -76,7 +76,7 @@
     "href": "assignments/week1-setup.html#where-to-look",
     "title": "DSCI 521 Week 1 Setup Tasks",
     "section": "Where to look",
-    "text": "Where to look\n\n\n\nFor\nLook at\n\n\n\n\nLinks, instructions, and materials\nCanvas\n\n\nWhat is due and when\nThe assessment table on the home page\n\n\nWhat each task is\nThis page\n\n\nLecture and office hour times\nMDS calendar\n\n\n\nIf something here disagrees with Canvas, Canvas is correct. Tell your instructor so we can fix this page.",
+    "text": "Where to look\n\n\n\nFor\nLook at\n\n\n\n\nLinks, instructions, and materials\nCanvas (has links to PrairieLearn and Gradescope as well)\n\n\nWhat is due and when\nThe assessment table on the home page\n\n\nWhat each task is\nThis page\n\n\nLecture and office hour times\nMDS calendar\n\n\n\nIf something here disagrees with Canvas, Canvas is correct. Tell your instructor so we can fix this page.",
     "crumbs": [
       "Home",
       "Assignments",
