@@ -141,7 +141,7 @@ Textbook:
 - [Editing a file in VS Code](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/mdstools-bash-filesystem.html#editing-a-file-in-vs-code)
 
 
-Create `README.md` at the top level of your milestone 1 folder (e.g. `code README.md`)
+Create `README.md` at the top level of your milestone 1 folder (e.g. `code README.md` if you have VS Code installed, `positron README.md` if you prefer Positron)
 and add:
 
 1. A title line with the course and milestone.
