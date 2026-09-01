@@ -187,11 +187,11 @@ private information is not.
 
 ## Step 4: Submit
 
-Submit your README.md file and the screenshots you made on Gradescope.
+Convert your README.md file to PDF (any way that works for you, e.g. by running `quarto render README.md --to typst`), and then submit the result and the screenshots you made on Gradescope.
 
 ## Before you submit, check
 
-- [ ] `README.md` has your name and your introduction paragraph.
+- [ ] `README.md` pdf has your name and your introduction paragraph.
 - [ ] You made the folders with `mkdir`,
       not with Finder or File Explorer,
       and your screenshot shows those commands.
@@ -203,7 +203,7 @@ Submit your README.md file and the screenshots you made on Gradescope.
 - [ ] `screenshots` holds your terminal screenshots and your history screenshot.
 - [ ] The terminal screenshots show your commands *and* their output.
 - [ ] No passwords or private information are visible in any screenshot.
-- [ ] Your screenshots and README.md are uploaded on Gradescope.
+- [ ] Your screenshots and a pdf generated from README.md are uploaded on Gradescope.
 
 ## Grading
 
