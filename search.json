@@ -24,11 +24,11 @@
     ]
   },
   {
-    "objectID": "assignments/week1-setup.html#setup",
-    "href": "assignments/week1-setup.html#setup",
+    "objectID": "assignments/week1-setup.html#setup-canvas",
+    "href": "assignments/week1-setup.html#setup-canvas",
     "title": "DSCI 521 Week 1 Setup Tasks",
-    "section": "Setup",
-    "text": "Setup\nInstall the MDS software stack and confirm it works.\nDo this one first. Everything else in Week 1 assumes your machine is working, and this is the task that finds out whether it is.",
+    "section": "Setup (Canvas)",
+    "text": "Setup (Canvas)\nInstall the MDS software stack and confirm it works. Submit the log on Canvas.\nDo this one first. Everything else in Week 1 assumes your machine is working, and this is the task that finds out whether it is.",
     "crumbs": [
       "Home",
       "Assignments",
@@ -36,11 +36,11 @@
     ]
   },
   {
-    "objectID": "assignments/week1-setup.html#policies",
-    "href": "assignments/week1-setup.html#policies",
+    "objectID": "assignments/week1-setup.html#policies-quiz-prairielearn",
+    "href": "assignments/week1-setup.html#policies-quiz-prairielearn",
     "title": "DSCI 521 Week 1 Setup Tasks",
-    "section": "Policies",
-    "text": "Policies\nRead the program policies and answer the questions on PrairieLearn.\nThis is also your first time using PrairieLearn, which you will meet again in the weekly practice questions and in a graded setting in another course.",
+    "section": "Policies quiz (PrairieLearn)",
+    "text": "Policies quiz (PrairieLearn)\nRead the program policies and answer the questions on PrairieLearn.\nThis is also your first time using PrairieLearn, which you will meet again in the weekly practice questions and in a graded setting in another course.",
     "crumbs": [
       "Home",
       "Assignments",
@@ -48,11 +48,11 @@
     ]
   },
   {
-    "objectID": "assignments/week1-setup.html#student-information-survey",
-    "href": "assignments/week1-setup.html#student-information-survey",
+    "objectID": "assignments/week1-setup.html#student-information-survey-prairielearn",
+    "href": "assignments/week1-setup.html#student-information-survey-prairielearn",
     "title": "DSCI 521 Week 1 Setup Tasks",
-    "section": "Student information survey",
-    "text": "Student information survey\nA short survey allowing teaching team to gather you github usernames and other necessary info for subsequent courses. Find it on PrairieLearn.",
+    "section": "Student information survey (PrairieLearn)",
+    "text": "Student information survey (PrairieLearn)\nA short survey allowing teaching team to gather you github usernames and other necessary info for subsequent courses. Find it on PrairieLearn.",
     "crumbs": [
       "Home",
       "Assignments",
@@ -60,11 +60,11 @@
     ]
   },
   {
-    "objectID": "assignments/week1-setup.html#lab-0a-python-and-lab-0b-r",
-    "href": "assignments/week1-setup.html#lab-0a-python-and-lab-0b-r",
+    "objectID": "assignments/week1-setup.html#lab-0a-python-and-lab-0b-r-gradescope",
+    "href": "assignments/week1-setup.html#lab-0a-python-and-lab-0b-r-gradescope",
     "title": "DSCI 521 Week 1 Setup Tasks",
-    "section": "Lab 0a: Python and Lab 0b: R",
-    "text": "Lab 0a: Python and Lab 0b: R\nTwo short labs covered during the orientation (find the recording in pins of the course slack channel), one per language.\nThey check that your Python and R installations can actually run and submit work. They do not check whether you already know the languages.\nJupyterLab orientation chapter and RStudio orientation chapter will be helpful for these labs.\n\n\n\n\n\n\nWarningUpload the assignment document\n\n\n\nAlso remember to upload the corresponding assignment document along with your html, pdf docs.",
+    "section": "Lab 0a: Python and Lab 0b: R (Gradescope)",
+    "text": "Lab 0a: Python and Lab 0b: R (Gradescope)\nTwo short labs covered during the orientation (find the recording in pins of the course slack channel), one per language.\nThey check that your Python and R installations can actually run and submit work. They do not check whether you already know the languages.\nJupyterLab orientation chapter and RStudio orientation chapter will be helpful for these labs.\n\n\n\n\n\n\nWarningUpload the assignment document\n\n\n\nAlso remember to upload the corresponding assignment document along with your html, pdf docs.",
     "crumbs": [
       "Home",
       "Assignments",
