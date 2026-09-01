@@ -28,15 +28,16 @@ Week 1 is front-loaded on purpose,
 so that anything broken on your machine turns up
 before Milestone 1 is due at the end of the week.
 
-## Setup
+## Setup (Canvas)
 
 Install the MDS software stack and confirm it works.
+Submit the log on Canvas.
 
 Do this one first.
 Everything else in Week 1 assumes your machine is working,
 and this is the task that finds out whether it is.
 
-## Policies
+## Policies quiz (PrairieLearn)
 
 Read the program policies and answer the questions on PrairieLearn.
 
@@ -44,11 +45,11 @@ This is also your first time using PrairieLearn,
 which you will meet again in the weekly practice questions
 and in a graded setting in another course.
 
-## Student information survey
+## Student information survey (PrairieLearn)
 
 A short survey allowing teaching team to gather you github usernames and other necessary info for subsequent courses. Find it on PrairieLearn.
 
-## Lab 0a: Python and Lab 0b: R
+## Lab 0a: Python and Lab 0b: R (Gradescope)
 
 Two short labs covered during the orientation (find the recording in pins of the course slack channel),
 one per language.
