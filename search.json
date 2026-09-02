@@ -24,8 +24,8 @@
     ]
   },
   {
-    "objectID": "assignments/week1-setup.html#setup-canvas",
-    "href": "assignments/week1-setup.html#setup-canvas",
+    "objectID": "assignments/week1-setup.html#setup",
+    "href": "assignments/week1-setup.html#setup",
     "title": "DSCI 521 Week 1 Setup Tasks",
     "section": "Setup (Canvas)",
     "text": "Setup (Canvas)\nInstall the MDS software stack and confirm it works. Submit the log on Canvas.\nDo this one first. Everything else in Week 1 assumes your machine is working, and this is the task that finds out whether it is.",
@@ -36,8 +36,8 @@
     ]
   },
   {
-    "objectID": "assignments/week1-setup.html#policies-quiz-prairielearn",
-    "href": "assignments/week1-setup.html#policies-quiz-prairielearn",
+    "objectID": "assignments/week1-setup.html#policies",
+    "href": "assignments/week1-setup.html#policies",
     "title": "DSCI 521 Week 1 Setup Tasks",
     "section": "Policies quiz (PrairieLearn)",
     "text": "Policies quiz (PrairieLearn)\nRead the program policies and answer the questions on PrairieLearn.\nThis is also your first time using PrairieLearn, which you will meet again in the weekly practice questions and in a graded setting in another course.",
@@ -48,8 +48,8 @@
     ]
   },
   {
-    "objectID": "assignments/week1-setup.html#student-information-survey-prairielearn",
-    "href": "assignments/week1-setup.html#student-information-survey-prairielearn",
+    "objectID": "assignments/week1-setup.html#survey",
+    "href": "assignments/week1-setup.html#survey",
     "title": "DSCI 521 Week 1 Setup Tasks",
     "section": "Student information survey (PrairieLearn)",
     "text": "Student information survey (PrairieLearn)\nA short survey allowing teaching team to gather you github usernames and other necessary info for subsequent courses. Find it on PrairieLearn.",
@@ -60,8 +60,8 @@
     ]
   },
   {
-    "objectID": "assignments/week1-setup.html#lab-0a-python-and-lab-0b-r-gradescope",
-    "href": "assignments/week1-setup.html#lab-0a-python-and-lab-0b-r-gradescope",
+    "objectID": "assignments/week1-setup.html#labs",
+    "href": "assignments/week1-setup.html#labs",
     "title": "DSCI 521 Week 1 Setup Tasks",
     "section": "Lab 0a: Python and Lab 0b: R (Gradescope)",
     "text": "Lab 0a: Python and Lab 0b: R (Gradescope)\nTwo short labs covered during the orientation (find the recording in pins of the course slack channel), one per language.\nThey check that your Python and R installations can actually run and submit work. They do not check whether you already know the languages.\nJupyterLab orientation chapter and RStudio orientation chapter will be helpful for these labs.\n\n\n\n\n\n\nWarningUpload the assignment document\n\n\n\nAlso remember to upload the corresponding assignment document along with your html, pdf docs.",
