@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "LICENSE.html",
+    "href": "LICENSE.html",
+    "title": "License",
+    "section": "",
+    "text": "This repository contains two kinds of material, and each is licensed differently.\nIf you reuse anything from this repository, apply the license that matches the kind of material you are reusing."
+  },
+  {
+    "objectID": "LICENSE.html#mit-license-code",
+    "href": "LICENSE.html#mit-license-code",
+    "title": "License",
+    "section": "MIT License (code)",
+    "text": "MIT License (code)\nCopyright (c) 2026 Master of Data Science, University of British Columbia\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  {
+    "objectID": "LICENSE.html#creative-commons-attribution-noncommercial-sharealike-4.0-international-prose",
+    "href": "LICENSE.html#creative-commons-attribution-noncommercial-sharealike-4.0-international-prose",
+    "title": "License",
+    "section": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (prose)",
+    "text": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (prose)\nCopyright (c) 2026 Master of Data Science, University of British Columbia\nNon-software content in this repository is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).\nYou are free to share and adapt this material, provided that you:\n\nAttribution - give appropriate credit, link to the license, and indicate if changes were made.\nNonCommercial - do not use the material for commercial purposes.\nShareAlike - if you remix or build upon the material, distribute your contributions under this same license.\n\nThe full legal text is available at https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en."
+  },
+  {
     "objectID": "assignments/week1-setup.html",
     "href": "assignments/week1-setup.html",
     "title": "DSCI 521 Week 1 Setup Tasks",
@@ -194,27 +215,6 @@
     ]
   },
   {
-    "objectID": "LICENSE.html",
-    "href": "LICENSE.html",
-    "title": "License",
-    "section": "",
-    "text": "This repository contains two kinds of material, and each is licensed differently.\nIf you reuse anything from this repository, apply the license that matches the kind of material you are reusing."
-  },
-  {
-    "objectID": "LICENSE.html#mit-license-code",
-    "href": "LICENSE.html#mit-license-code",
-    "title": "License",
-    "section": "MIT License (code)",
-    "text": "MIT License (code)\nCopyright (c) 2026 Master of Data Science, University of British Columbia\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
-  },
-  {
-    "objectID": "LICENSE.html#creative-commons-attribution-noncommercial-sharealike-4.0-international-prose",
-    "href": "LICENSE.html#creative-commons-attribution-noncommercial-sharealike-4.0-international-prose",
-    "title": "License",
-    "section": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (prose)",
-    "text": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (prose)\nCopyright (c) 2026 Master of Data Science, University of British Columbia\nNon-software content in this repository is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0).\nYou are free to share and adapt this material, provided that you:\n\nAttribution - give appropriate credit, link to the license, and indicate if changes were made.\nNonCommercial - do not use the material for commercial purposes.\nShareAlike - if you remix or build upon the material, distribute your contributions under this same license.\n\nThe full legal text is available at https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en."
-  },
-  {
     "objectID": "assignments/milestone1.html",
     "href": "assignments/milestone1.html",
     "title": "DSCI 521 Milestone 1",
@@ -279,7 +279,7 @@
     "href": "assignments/milestone1.html#step-3-screenshot-your-terminal-work",
     "title": "DSCI 521 Milestone 1",
     "section": "Step 3: Screenshot your terminal work",
-    "text": "Step 3: Screenshot your terminal work\nTextbook: Seeing the history of commands\n\nScroll up through the window and take screenshots of your commands and their output, from your first mkdir onward. Take as many as you need to cover the whole session. Name them terminal-1.png, terminal-2.png, and so on.\nThen run:\nhistory\nTake a screenshot of that output too, and name it history.png. If the list is too long for one screen, use history-1.png, history-2.png, and so on. 3b. You need a screenshot of README.md in your editor as well.\nSave all of these screenshots in the screenshots folder you made in Step 1.\n\nRemember from earlier: mess is fine, private information is not.",
+    "text": "Step 3: Screenshot your terminal work\nTextbook: Seeing the history of commands\n\nScroll up through the window and take screenshots of your commands and their output, from your first mkdir onward (i.e., only the relevent commands for this assignment). Take as many as you need to cover the whole session. Name them terminal-1.png, terminal-2.png, and so on.\nThen run:\nhistory\nTake a screenshot of that output too, and name it history.png. If the list is too long for one screen, use history-1.png, history-2.png, and so on. 3b. You need a screenshot of README.md in your editor as well.\nSave all of these screenshots in the screenshots folder you made in Step 1.\n\nRemember from earlier: mess is fine, private information is not.",
     "crumbs": [
       "Home",
       "Assignments",
