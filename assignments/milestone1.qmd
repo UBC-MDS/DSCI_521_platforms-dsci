@@ -165,7 +165,8 @@ Textbook: [Seeing the history of commands](https://ubc-mds.github.io/DSCI_521_pl
 
 1. Scroll up through the window
    and take screenshots of your commands and their output,
-   from your first `mkdir` onward.
+   from your first `mkdir` onward
+   (i.e., only the relevent commands for this assignment).
    Take as many as you need to cover the whole session.
    Name them `terminal-1.png`, `terminal-2.png`, and so on.
 2. Then run:
