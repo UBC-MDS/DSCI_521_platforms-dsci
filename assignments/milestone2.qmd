@@ -297,6 +297,17 @@ set up three things.
 
 3. Render your website with `quarto render`
 
+:::{.callout-note}
+## Not all the files will exist
+
+Depending on how you are rendering your website, when you are rendering the website,
+what computer operating system you are on,
+when you run `git status` and/or `ls -a` you may or may not see some of the files
+we are referring to.
+What is important is the files we are asking you to ignore do not make it in the final
+github.com repository.
+:::
+
 4. Keep Quarto's cache and other clutter out of Git.
    Quarto makes a `.quarto` folder when it renders.
    macOS makes `.DS_Store` files when you open a folder in Finder.
