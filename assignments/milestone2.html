@@ -421,18 +421,20 @@ styles.css</code></pre>
 </ul>
 <p>Either way, what we check is that <code>docs/.nojekyll</code> is on github.com.</p></li>
 <li><p>Keep Quarto’s cache and other clutter out of Git. Quarto makes a <code>.quarto</code> folder when it renders. macOS makes <code>.DS_Store</code> files when you open a folder in Finder. An early render may have made a <code>_site</code> folder. None of these belong on GitHub.</p>
-<p>There are two ways to keep them out. Pick one:</p>
+<p>We cover ignore files in a later class. Until then there are three ways to handle this. Each one works. Pick the one you can do consistently:</p>
 <ul>
-<li><p><strong>A <code>.gitignore</code> file.</strong> Create a file named <code>.gitignore</code> at the top level of your repository with these lines in it:</p>
-<pre><code>/.quarto/
-/_site/
-.DS_Store</code></pre>
-<p>Git then skips those files every time you <code>git add</code>. You will learn more about <code>.gitignore</code> in Week 3.</p></li>
-<li><p><strong>By hand, before every commit.</strong> Run <code>git status</code>, and delete anything from that list before you <code>git add</code>:</p>
+<li><p><strong>Leave them alone, and stage files by name.</strong> Do nothing to the files. They sit in <code>git status</code> as untracked, and you never stage them:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add index.qmd about.qmd docs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><em>Pro:</em> nothing to remember to delete, and you never lose Quarto’s cache, so renders stay fast. <em>Con:</em> <code>git status</code> is always noisy, so a real change is easy to miss, and a single <code>git add .</code> checks everything in at once. Never run <code>git add .</code> if you go this way.</p></li>
+<li><p><strong>Delete them before every commit.</strong> Run <code>git status</code>, and delete anything on that list that does not belong:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-r</span> .quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Do the same for <code>_site</code> and any <code>.DS_Store</code> files that show up. You have to do this every time, because <code>quarto render</code> makes <code>.quarto</code> again.</p></li>
+<p>Do the same for <code>_site</code> and any <code>.DS_Store</code> files that show up.</p>
+<p><em>Pro:</em> <code>git status</code> stays clean, so it is easy to read, and <code>git add .</code> is safe. <em>Con:</em> you have to do it after every render, because <code>quarto render</code> makes <code>.quarto</code> again, and deleting the cache makes the next render slower.</p></li>
+<li><p><strong>Create an ignore file.</strong> Git can be told to skip a set of files every time you <code>git add</code>. We cover ignore files in a later class, so you are not expected to use this method yet.</p>
+<p><em>Pro:</em> you set it up once and it keeps working, <code>git status</code> stays clean, and you keep the cache. <em>Con:</em> we have not covered it yet, so you are on your own to look up how ignore files work, and a wrong pattern can silently hide a file you meant to commit.</p></li>
 </ul>
-<p>Either way, what we check is that none of <code>.quarto</code>, <code>_site</code>, or <code>.DS_Store</code> are on github.com. Checking them in costs marks.</p></li>
+<p>Whichever you pick, if one of these files is already staged, take it back out of the staging area before you commit. Run <code>git status</code>: Git prints the command for unstaging a file right there in the output. Git tries to help you. Reading output and documentation is one of the skills this course is teaching you.</p>
+<p>All three ways get you to the same place, and what we check is that none of <code>.quarto</code>, <code>_site</code>, or <code>.DS_Store</code> are on github.com. Checking them in costs marks.</p></li>
 </ol>
 <p>Now preview the site:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -562,18 +564,19 @@ styles.css</code></pre>
 <li><p>Check that <code>docs</code> has what you expect:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-a</span> docs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You should see <code>.nojekyll</code>, <code>index.html</code>, <code>about.html</code>, <code>blog.html</code>, a <code>posts</code> folder, and an <code>images</code> folder.</p></li>
-<li><p>If you are not using a <code>.gitignore</code>, delete the clutter now:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-r</span> .quarto</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Also delete <code>_site</code> and any <code>.DS_Store</code> files if they exist.</p></li>
 <li><p>Look before you stage:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>If <code>.quarto</code>, <code>_site</code>, or <code>.DS_Store</code> appear in that list, stop. Fix your <code>.gitignore</code>, or delete them, then run <code>git status</code> again.</p></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Deal with anything in that list that does not belong in the repository: delete it, unstage it, untrack it, or leave it untracked and stage by name, whichever fits the way you picked in Step 3. Git names the command for each of these in its own output. Run <code>git status</code> again until you are happy with what is about to go in.</p></li>
 <li><p>Stage, commit, and push:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"render site"</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><code>git add .</code> stages everything in the folder, except what <code>.gitignore</code> excludes.</p></li>
-<li><p>Reload your repository page on github.com. Confirm that the <code>docs</code> folder is there, that it has <code>index.html</code> and <code>.nojekyll</code> inside it, and that there is no <code>.quarto</code> folder anywhere. If you cannot see a file on github.com, it is not submitted.</p></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"render site"</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Check your work in both places:</p>
+<ul>
+<li><strong>The repository on github.com.</strong> Reload the page. The <code>docs</code> folder is there, with <code>index.html</code> and <code>.nojekyll</code> inside it, and none of <code>.quarto</code>, <code>_site</code>, or <code>.DS_Store</code> are anywhere in the repository.</li>
+<li><strong>The live website at <code>https://username.github.io</code>.</strong> Every page loads, the images show up, and your post is there. Give GitHub a minute or two after a push before you judge the site.</li>
+</ul>
+<p>If you cannot see a file on github.com, it is not submitted.</p></li>
 </ol>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -586,10 +589,10 @@ styles.css</code></pre>
 </div>
 <div class="callout-body-container callout-body">
 <p>Deleting the folder on your computer is not enough once Git is tracking it. Tell Git to stop tracking it, then commit and push:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">-r</span> <span class="at">--cached</span> .quarto</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"remove quarto cache"</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Then set up a <code>.gitignore</code>, or delete the folder before every commit, so it does not come back.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">-r</span> <span class="at">--cached</span> .quarto</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"remove quarto cache"</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin main</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Then go back to Step 3 and pick one of the three ways of keeping it out, so it does not come back.</p>
 </div>
 </div>
 <p>Use these same commands for the earlier commits too. Any file you have changed can go in a commit, even before the site is finished.</p>
