@@ -301,35 +301,68 @@ set up three things.
    An early render may have made a `_site` folder.
    None of these belong on GitHub.
 
-   There are two ways to keep them out.
-   Pick one:
+   We cover ignore files in a later class.
+   Until then there are three ways to handle this.
+   Each one works.
+   Pick the one you can do consistently:
 
-   - **A `.gitignore` file.**
-     Create a file named `.gitignore` at the top level of your repository
-     with these lines in it:
+   - **Leave them alone,
+     and stage files by name.**
+     Do nothing to the files.
+     They sit in `git status` as untracked,
+     and you never stage them:
 
+     ```bash
+     git add index.qmd about.qmd docs
      ```
-     /.quarto/
-     /_site/
-     .DS_Store
-     ```
 
-     Git then skips those files every time you `git add`.
-     You will learn more about `.gitignore` in Week 3.
-   - **By hand, before every commit.**
+     *Pro:* nothing to remember to delete,
+     and you never lose Quarto's cache,
+     so renders stay fast.
+     *Con:* `git status` is always noisy,
+     so a real change is easy to miss,
+     and a single `git add .` checks everything in at once.
+     Never run `git add .` if you go this way.
+   - **Delete them before every commit.**
      Run `git status`,
-     and delete anything from that list before you `git add`:
+     and delete anything on that list that does not belong:
 
      ```bash
      rm -r .quarto
      ```
 
      Do the same for `_site` and any `.DS_Store` files that show up.
-     You have to do this every time,
-     because `quarto render` makes `.quarto` again.
 
-   Either way,
-   what we check is that none of `.quarto`,
+     *Pro:* `git status` stays clean,
+     so it is easy to read,
+     and `git add .` is safe.
+     *Con:* you have to do it after every render,
+     because `quarto render` makes `.quarto` again,
+     and deleting the cache makes the next render slower.
+   - **Create an ignore file.**
+     Git can be told to skip a set of files every time you `git add`.
+     We cover ignore files in a later class,
+     so you are not expected to use this method yet.
+
+     *Pro:* you set it up once and it keeps working,
+     `git status` stays clean,
+     and you keep the cache.
+     *Con:* we have not covered it yet,
+     so you are on your own to look up how ignore files work,
+     and a wrong pattern can silently hide a file you meant to commit.
+
+   Whichever you pick,
+   if one of these files is already staged,
+   take it back out of the staging area before you commit.
+   Run `git status`:
+   Git prints the command for unstaging a file
+   right there in the output.
+   Git tries to help you.
+   Reading output and documentation
+   is one of the skills this course is teaching you.
+
+   All three ways get you to the same place,
+   and what we check is that none of `.quarto`,
    `_site`,
    or `.DS_Store` are on github.com.
    Checking them in costs marks.
@@ -604,30 +637,22 @@ there is no website.
    a `posts` folder,
    and an `images` folder.
 
-5. If you are not using a `.gitignore`,
-   delete the clutter now:
-
-   ```bash
-   rm -r .quarto
-   ```
-
-   Also delete `_site` and any `.DS_Store` files if they exist.
-
-6. Look before you stage:
+5. Look before you stage:
 
    ```bash
    git status
    ```
 
-   If `.quarto`,
-   `_site`,
-   or `.DS_Store` appear in that list,
-   stop.
-   Fix your `.gitignore`,
-   or delete them,
-   then run `git status` again.
+   Deal with anything in that list that does not belong in the repository:
+   delete it,
+   unstage it,
+   untrack it,
+   or leave it untracked and stage by name,
+   whichever fits the way you picked in Step 3.
+   Git names the command for each of these in its own output.
+   Run `git status` again until you are happy with what is about to go in.
 
-7. Stage, commit, and push:
+6. Stage, commit, and push:
 
    ```bash
    git add .
@@ -635,13 +660,21 @@ there is no website.
    git push origin main
    ```
 
-   `git add .` stages everything in the folder,
-   except what `.gitignore` excludes.
+7. Check your work in both places:
 
-8. Reload your repository page on github.com.
-   Confirm that the `docs` folder is there,
-   that it has `index.html` and `.nojekyll` inside it,
-   and that there is no `.quarto` folder anywhere.
+   - **The repository on github.com.**
+     Reload the page.
+     The `docs` folder is there,
+     with `index.html` and `.nojekyll` inside it,
+     and none of `.quarto`,
+     `_site`,
+     or `.DS_Store` are anywhere in the repository.
+   - **The live website at `https://username.github.io`.**
+     Every page loads,
+     the images show up,
+     and your post is there.
+     Give GitHub a minute or two after a push before you judge the site.
+
    If you cannot see a file on github.com,
    it is not submitted.
 
@@ -658,8 +691,8 @@ git commit -m "remove quarto cache"
 git push origin main
 ```
 
-Then set up a `.gitignore`,
-or delete the folder before every commit,
+Then go back to Step 3 and pick one of the three ways
+of keeping it out,
 so it does not come back.
 :::
 
