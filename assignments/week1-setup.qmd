@@ -28,15 +28,16 @@ Week 1 is front-loaded on purpose,
 so that anything broken on your machine turns up
 before Milestone 1 is due at the end of the week.
 
-## Setup
+## Setup (Canvas) {#setup}
 
 Install the MDS software stack and confirm it works.
+Submit the log on Canvas.
 
 Do this one first.
 Everything else in Week 1 assumes your machine is working,
 and this is the task that finds out whether it is.
 
-## Policies
+## Policies quiz (PrairieLearn) {#policies}
 
 Read the program policies and answer the questions on PrairieLearn.
 
@@ -44,24 +45,32 @@ This is also your first time using PrairieLearn,
 which you will meet again in the weekly practice questions
 and in a graded setting in another course.
 
-## Student information survey
+## Student information survey (PrairieLearn) {#survey}
 
-A short survey so the teaching team knows who you are.
+A short survey allowing teaching team to gather you github usernames and other necessary info for subsequent courses. Find it on PrairieLearn.
 
-## Lab 0a: Python and Lab 0b: R
+## Lab 0a: Python and Lab 0b: R (Gradescope) {#labs}
 
-Two short labs,
+Two short labs covered during the orientation (find the recording in pins of the course slack channel),
 one per language.
 
 They check that your Python and R installations
 can actually run and submit work.
 They do not check whether you already know the languages.
 
+[JupyterLab orientation chapter](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/jupyterlab-orientation-intro.html) and [RStudio orientation chapter](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/rstudio-orientation-intro.html) will be helpful for these labs.
+
+:::{.callout-warning}
+## Upload the assignment document
+
+Also remember to upload the corresponding assignment document along with your html, pdf docs.
+:::
+
 ## Where to look
 
 | For                                | Look at                                                            |
 |------------------------------------|--------------------------------------------------------------------|
-| Links, instructions, and materials | Canvas                                                             |
+| Links, instructions, and materials | Canvas  (has links to PrairieLearn and Gradescope as well)                                                           |
 | What is due and when               | The [assessment table](../index.qmd#assessments) on the home page  |
 | What each task is                  | This page                                                          |
 | Lecture and office hour times      | [MDS calendar](https://ubc-mds.github.io/calendar/)                |
