@@ -59,7 +59,7 @@ The only **group work** is a lab activity in Week 3.
 | [__Lab 0a: Python__](assignments/week1-setup.qmd#labs)                                  | 1%     | W1   | Thu 2026-09-03 18:00 PT | Gradescope          |
 | [__Lab 0b: R__](assignments/week1-setup.qmd#labs)                                       | 1%     | W1   | Thu 2026-09-03 18:00 PT | Gradescope          |
 | [Policies](assignments/week1-setup.qmd#policies)                                            | 1%     | W1   | Sat 2026-09-05 18:00 PT | PrairieLearn        |
-| [__Milestone 1__](assignments/milestone1.qmd): practice repo and terminal workflow | 19%    | W1   | Sat 2026-09-05 18:00 PT | Gradescope |
+| [__Milestone 1__](assignments/milestone1.qmd): terminal practice                   | 19%    | W1   | Sat 2026-09-05 18:00 PT | Gradescope |
 | __Practice 1__                                                                     | 2%     | W2   | Sat 2026-09-12 18:00 PT | PrairieLearn        |
 | __Milestone 2__: website live on GitHub Pages                                      | 25%    | W2   | Sat 2026-09-12 18:00 PT | GitHub & Gradescope |
 | __Practice 2__                                                                     | 2%     | W3   | Sun 2026-09-20 18:00 PT | PrairieLearn        |
@@ -76,17 +76,26 @@ week in your other courses, so you get the extra day.
 
 ### What each milestone will ask you to do (refer to full milestone description released every week)
 
-__Milestone 1: Get your tools working (Week 1).__ Create a public repository on your own
-github.com account, clone it, build a folder structure from the terminal, write a
-`README.md` that introduces you, and push it all back. You also screenshot your terminal
-so we can see the commands and their output. There is no code in this milestone. It is a
-practice run, so that anything broken on your machine turns up now rather than in Week 2.
+__Milestone 1: Get your tools working (Week 1).__
+Build a folder structure from the terminal,
+write a `README.md` that introduces you,
+and screenshot your terminal so we can see the commands and their output.
+There is no code and no repository in this milestone.
+It is a practice run,
+so that anything broken on your machine turns up now rather than in Week 2,
+when your real project repository starts.
 
-__Milestone 2: Publish your site (Week 2).__ This is where your real project repository
-starts. Build a Quarto website and publish it to GitHub Pages, with your introduction on
-the front page. Includes your __hello-world post__: about three paragraphs and one image
-on who you are, why you are here, and your first weeks here. Keep it short. The point is
-to get publishing working.
+__Milestone 2: Publish your site (Week 2).__
+This is where your real project repository starts.
+Create a public `username.github.io` repository,
+build a Quarto website in it,
+and publish it to GitHub Pages.
+The site needs a home page with your photo and introduction,
+an about page,
+and your __hello-world post__:
+about three paragraphs and one image on your first weeks in MDS.
+Keep it short.
+The point is to get publishing working.
 
 __Group lab: Collaborative slides (Week 3).__ In groups of four you build __one__ shared
 Quarto / reveal.js deck in a shared repository, answering four questions everyone answers.
@@ -119,7 +128,9 @@ Each milestone and the group lab are submitted in two places:
 2. __Gradescope__: a PDF containing the URL of your repository and the URL of your
    rendered site.
 
-Milestone 1 has no site yet, so its PDF only needs the repository URL.
+Milestone 1 has no repository or site yet.
+For that one you upload your screenshots to Gradescope directly,
+including one of your `README.md`.
 
 Tip: Use the lecture learning objectives as beacons. Each week's objectives are what that
 week's milestone asks you to demonstrate.
