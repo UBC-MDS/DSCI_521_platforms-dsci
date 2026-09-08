@@ -660,7 +660,7 @@ there is no website.
    git push origin main
    ```
 
-7. Check your work in both places:
+7. Check your work:
 
    - **The repository on github.com.**
      Reload the page.
@@ -669,11 +669,6 @@ there is no website.
      and none of `.quarto`,
      `_site`,
      or `.DS_Store` are anywhere in the repository.
-   - **The live website at `https://username.github.io`.**
-     Every page loads,
-     the images show up,
-     and your post is there.
-     Give GitHub a minute or two after a push before you judge the site.
 
    If you cannot see a file on github.com,
    it is not submitted.
