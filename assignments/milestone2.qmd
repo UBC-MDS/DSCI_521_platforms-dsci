@@ -295,7 +295,9 @@ set up three things.
    Either way,
    what we check is that `docs/.nojekyll` is on github.com.
 
-3. Keep Quarto's cache and other clutter out of Git.
+3. Render your website with `quarto render`
+
+4. Keep Quarto's cache and other clutter out of Git.
    Quarto makes a `.quarto` folder when it renders.
    macOS makes `.DS_Store` files when you open a folder in Finder.
    An early render may have made a `_site` folder.
