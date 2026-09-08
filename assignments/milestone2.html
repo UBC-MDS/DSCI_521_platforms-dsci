@@ -420,6 +420,7 @@ styles.css</code></pre>
 <li><strong>Once, at the top level.</strong> Run <code>touch .nojekyll</code> at the top level of the repository. Quarto copies it into <code>docs</code> every time you render, so you only create it once.</li>
 </ul>
 <p>Either way, what we check is that <code>docs/.nojekyll</code> is on github.com.</p></li>
+<li><p>Render your website with <code>quarto render</code></p></li>
 <li><p>Keep Quarto’s cache and other clutter out of Git. Quarto makes a <code>.quarto</code> folder when it renders. macOS makes <code>.DS_Store</code> files when you open a folder in Finder. An early render may have made a <code>_site</code> folder. None of these belong on GitHub.</p>
 <p>We cover ignore files in a later class. Until then there are three ways to handle this. Each one works. Pick the one you can do consistently:</p>
 <ul>
