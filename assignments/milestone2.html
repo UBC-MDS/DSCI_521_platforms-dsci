@@ -395,7 +395,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/quarto-github-pages.html#your-first-quarto-website">Your first Quarto website</a></li>
 <li><a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/quarto-github-pages.html#tweaking-your-website">Tweaking your website</a></li>
+<li><a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/quarto-github-pages.html#quarto-docs">Finding what you need in the Quarto documentation</a></li>
 <li><a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/quarto-github-pages.html#rendering-your-website">Rendering your website</a></li>
+<li><a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/quarto-github-pages.html#nojekyll">Turning off Jekyll with <code>.nojekyll</code></a></li>
 </ul>
 <p>From inside your repository folder, run:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> create project website . <span class="at">--no-open</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -411,7 +413,7 @@ styles.css</code></pre>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> website</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">output-dir</span><span class="kw">:</span><span class="at"> docs</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If you already ran <code>quarto preview</code> or <code>quarto render</code> before adding this line, delete the <code>_site</code> folder it made with <code>rm -r _site</code>.</p></li>
-<li><p>Plan for the <code>.nojekyll</code> file. GitHub runs a tool called Jekyll on every site by default, and it can break a Quarto site. An empty file named <code>.nojekyll</code> in the folder GitHub publishes from (<code>docs</code> in our case) turns it off.</p>
+<li><p>Plan for the <code>.nojekyll</code> file. GitHub runs a tool called Jekyll on every site by default, and it can break a Quarto site. An empty file named <code>.nojekyll</code> in the folder GitHub publishes from (<code>docs</code> in our case) turns it off. The textbook covers this in <a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/quarto-github-pages.html#nojekyll">Turning off Jekyll with <code>.nojekyll</code></a>.</p>
 <p>There are two ways to get it there. Pick one:</p>
 <ul>
 <li><strong>By hand, after every render.</strong> <code>quarto render</code> empties <code>docs</code> before it fills it again, so a file you put in <code>docs</code> by hand is gone after the next render. If you go this way, run <code>touch docs/.nojekyll</code> after every <code>quarto render</code> and before you commit. Step 7 has this in the right order.</li>
@@ -487,7 +489,8 @@ styles.css</code></pre>
 </section>
 <section id="step-6-your-first-blog-post" class="level2">
 <h2 class="anchored" data-anchor-id="step-6-your-first-blog-post">Step 6: Your first blog post</h2>
-<p>Textbook: <a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/quarto-github-pages.html#rendering-your-website">Rendering your website</a></p>
+<p>Textbook: <a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/quarto-github-pages.html#quarto-docs">Finding what you need in the Quarto documentation</a></p>
+<p>That section maps the topics this step uses onto the pages of the Quarto documentation that explain them: listing pages, figures and captions, and markdown basics. Looking things up there is part of the exercise.</p>
 <p>Write a post about your first weeks in MDS. Orientation, the first week of classes, what surprised you, how you are feeling now.</p>
 <p>Keep it short. The cap is <strong>about three paragraphs and one image</strong>. The point of this post is to get publishing working, not to write an essay. Milestone 3 has room for longer posts.</p>
 <ol type="1">
