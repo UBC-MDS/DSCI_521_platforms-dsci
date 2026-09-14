@@ -1487,8 +1487,47 @@ index ea5b31d..0f73c7d 100644
 </div>
 </div>
 </section>
-<section id="situation-i-ran-git-diff-on-a-notebook-and-got-json-soup" class="slide level2 smaller">
-<h2>Situation: I ran git diff on a notebook and got JSON soup</h2>
+<section id="situation-git-status-lists-the-same-file-twice" class="slide level2 smaller">
+<h2>Situation: git status lists the same file twice</h2>
+<div class="columns">
+<div class="column" style="width:52%;">
+<div class="term">
+<pre><span class="tp">$ git status</span>
+On branch main
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+        <span class="tg">modified:   README.md</span>
+
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+        <span class="tr">modified:   README.md</span></pre>
+</div>
+<div class="term">
+<pre><span class="tp">$ git diff</span>
+diff --git a/README.md b/README.md
+index 8656b4a..20244b2 100644
+--- a/README.md
++++ b/README.md
+<span class="tc">@@ -6,3 +6,5 @@ Start date: 2026-09-01</span>
+ 
+ - Python 3.12
+ - R
+<span class="tg">+</span>
+<span class="tg">+## Usage</span></pre>
+</div>
+</div><div class="column" style="width:48%;">
+<p><strong>Solution:</strong> <code>git diff</code> shows the changes that are not staged.</p>
+<ul>
+<li><code>git diff --staged</code> shows the staged ones, the changes your commit will contain</li>
+<li><code>git diff &lt;older_sha&gt; &lt;newer_sha&gt;</code> compares two commits, oldest first</li>
+<li><code>git diff &lt;sha&gt;</code> compares that commit with your files right now</li>
+</ul>
+<p>Each <code>git status</code> heading has its own diff. “Changes to be committed” is <code>--staged</code>. “Changes not staged for commit” is plain <code>git diff</code>.</p>
+</div></div>
+</section>
+<section id="situation-git-diff-on-a-notebook-gives-json-soup" class="slide level2 smaller">
+<h2>Situation: git diff on a notebook gives JSON soup</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="term">
@@ -1524,7 +1563,7 @@ index ea5b31d..0f73c7d 100644
 <span class="tr">-  df.groupby(&quot;month&quot;).size()</span>
 <span class="tg">+  df.groupby(&quot;month&quot;)[&quot;mm&quot;].mean()</span></pre>
 </div>
-<p><code>nbdiff-web</code> opens it in a browser.</p>
+<p><code>nbdiff-web</code> opens it in a browser. VS Code and Positron also render notebook diffs cell by cell in their Source Control panes.</p>
 </div>
 </div></div>
 </section></section>
@@ -1666,12 +1705,14 @@ M   README.md
 HEAD is now at 77980d0 Accidentally delete dependencies</pre>
 </div>
 </div><div class="column" style="width:48%;">
-<p><strong>Solution:</strong> <code>reset</code> moves main back. <code>HEAD~1</code> is one commit before the current one; a sha does the same.</p>
+<p><strong>Solution:</strong> <code>reset</code> trims the commits after <code>&lt;sha&gt;</code> from the local repo. The flag decides where their changes land.</p>
 <ul>
-<li><code>git reset &lt;sha&gt;</code>: repository loses the commit(s), working directory keeps them</li>
-<li><code>git reset --hard &lt;sha&gt;</code>: repository and working directory both lose them</li>
+<li><code>--soft</code>: staged, ready to commit again</li>
+<li>no flag: in the working directory, unstaged</li>
+<li><code>--hard</code>: gone from both</li>
 </ul>
-<p>Only while it is unpushed: a secret already on GitHub must be rotated.</p>
+<p><code>HEAD~1</code> is one commit before the current one.</p>
+<p>Only while unpushed: a secret already on GitHub must be rotated.</p>
 <p>The sha is the commit to reset <strong>to</strong>, not the one you cancel.</p>
 </div></div>
 </section>
@@ -1861,6 +1902,7 @@ hint:   git config pull.ff only       # fast-forward only
 </ul>
 <p>Rebase and fast-forward-only are the other two. You will meet them in 524.</p>
 <p>You can also set it once: <code>git config --global pull.rebase false</code></p>
+<p>If a pull has stopped on a conflict you do not want to resolve now, <code>git merge --abort</code> returns the repository to where it was before the pull.</p>
 </div></div>
 </section>
 <section id="situation-the-pull-went-through-and-now-the-file-has-arrows-in-it" class="slide level2 smaller">
@@ -1953,6 +1995,7 @@ Your branch is behind &#39;origin/main&#39; by 2 commits,
 and can be fast-forwarded.
   (use &quot;git pull&quot; to update your local branch)</pre>
 </div>
+<p><code>git fetch</code> downloads the remote’s new commits and updates <code>origin/main</code>. Your own files do not change.</p>
 </div><div class="column" style="width:53%;">
 <div class="quizdown">
 ---
@@ -2033,6 +2076,7 @@ nothing added to commit but untracked files present</pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename=".gitignore"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href aria-hidden="true" tabindex="-1"></a>.DS_Store</span>
 <span id="cb5-2"><a href aria-hidden="true" tabindex="-1"></a>**/.ipynb_checkpoints/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<p><code>.gitignore</code> only covers files git is not already tracking. For a file you already committed: <code>git rm --cached data.csv</code>, then commit. The file stays on your computer, and stays in the old commits.</p>
 </div></div>
 </section>
 <section id="how-confident-do-we-feel-about-the-conflict-you-are-about-to-create" class="slide level2 ask" data-background-color="#f4ecdd">
