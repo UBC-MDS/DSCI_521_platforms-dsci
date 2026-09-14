@@ -1715,10 +1715,18 @@ no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&q
 <p>Only while unpushed: a secret already on GitHub must be rotated.</p>
 </div></div>
 </section>
-<section id="same-reset---hard-the-changes-go-too" class="slide level2 smaller">
-<h2>Same reset, <code>--hard</code>: the changes go too</h2>
+<section id="same-reset-two-flags---soft-and---hard" class="slide level2 smaller">
+<h2>Same reset, two flags: <code>--soft</code> and <code>--hard</code></h2>
 <div class="columns">
 <div class="column" style="width:52%;">
+<div class="term">
+<pre><span class="tp">$ git reset --soft HEAD~1</span>
+
+<span class="tp">$ git status</span>
+On branch main
+Changes to be committed:
+        <span class="tg">modified:   README.md</span></pre>
+</div>
 <div class="term">
 <pre><span class="tp">$ git reset --hard HEAD~1</span>
 HEAD is now at 5021352 Add dependency list
@@ -1728,29 +1736,13 @@ On branch main
 nothing to commit, working tree clean</pre>
 </div>
 </div><div class="column" style="width:48%;">
-<p><strong>Solution:</strong> <code>--hard</code> does the same to the local repo, then overwrites your files as well.</p>
-<p>Nothing is left to unstage, which is why git prints no notice and status is clean.</p>
-<p>Use it when the work itself is the mistake. There is no undo.</p>
+<p><strong>Solution:</strong> same command, same trimmed commits. The flag decides where their changes land.</p>
+<ul>
+<li><code>--soft</code>: staged, ready to commit again</li>
+<li><code>--hard</code>: your files are overwritten too, and there is no undo</li>
+</ul>
+<p>Reach for <code>--soft</code> when the commit was right but its message was not, or when you forgot a file: reset, add the file, commit again.</p>
 <p>Only while unpushed: a secret already on GitHub must be rotated.</p>
-</div></div>
-</section>
-<section id="same-reset---soft-the-changes-stay-staged" class="slide level2 smaller">
-<h2>Same reset, <code>--soft</code>: the changes stay staged</h2>
-<div class="columns">
-<div class="column" style="width:52%;">
-<div class="term">
-<pre><span class="tp">$ git reset --soft HEAD~1</span>
-
-<span class="tp">$ git status</span>
-On branch main
-Changes to be committed:
-  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
-        <span class="tg">modified:   README.md</span></pre>
-</div>
-</div><div class="column" style="width:48%;">
-<p><strong>Solution:</strong> <code>--soft</code> trims the commit and leaves its changes staged, ready to commit again.</p>
-<p>Use it when the commit was right but its message was not, or when you forgot a file: reset, add the file, commit again.</p>
-<p>It prints nothing, so <code>git status</code> is how you see where the changes went.</p>
 </div></div>
 </section>
 <section id="situation-i-reset-and-now-push-is-refused" class="slide level2 smaller">
@@ -2041,9 +2033,9 @@ and can be fast-forwarded.
 shuffle_answers: true
 ---
 
-## The fetch and the merge together are what `git pull` does. What will the merge do here?
+## `git pull` = fetch + merge in this case. What will the merge do here?
 
-1. [x] Move main up to origin/main, with nothing to combine
+1. [x] Update main to origin/main, with nothing to combine
     &gt; You committed nothing, so the merge has no work of yours to reconcile. Main catches up to where remote main already is. Git&#39;s word for that is on your screen: fast-forwarded.
 1. [ ] Combine your commits with theirs into a new commit
     &gt; That is what a merge does when both sides have moved. Here only the remote moved.
@@ -2115,7 +2107,7 @@ nothing added to commit but untracked files present</pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename=".gitignore"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href aria-hidden="true" tabindex="-1"></a>.DS_Store</span>
 <span id="cb5-2"><a href aria-hidden="true" tabindex="-1"></a>**/.ipynb_checkpoints/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><code>.gitignore</code> only covers files git is not already tracking. For a file you already committed: <code>git rm --cached data.csv</code>, then commit. The file stays in your working directory <em>and in the old commits</em>.</p>
+<p><code>.gitignore</code> only covers files git is not already tracking. For a file you already committed: <code>git rm --cached data.csv</code>, then commit. That means “stop tracking this”, not “delete this”: the file stays in your working directory <em>and in the old commits</em>.</p>
 </div></div>
 </section>
 <section id="how-confident-do-we-feel-about-the-conflict-you-are-about-to-create" class="slide level2 ask" data-background-color="#f4ecdd">
