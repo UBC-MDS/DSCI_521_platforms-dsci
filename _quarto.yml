@@ -1,5 +1,8 @@
 project:
   type: website
+  resources:
+    # static pages published as-is (lecture decks); not rendered by this project
+    - slides/
 
 website:
   title: "DSCI 521: Computing Platforms for Data Science (Students)"

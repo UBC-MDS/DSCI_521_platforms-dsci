@@ -3,6 +3,8 @@ _site
 **/*.quarto_ipynb
 **_files
 *.html
+# except lecture decks, which are published as static pages, not rendered here
+!slides/*.html
 .DS_Store
 
 /.luarc.json
