@@ -105,6 +105,186 @@
     ]
   },
   {
+    "objectID": "assignments/lab3-group.html",
+    "href": "assignments/lab3-group.html",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "",
+    "text": "See the assessment table on the home page for the weight, due date, and where to submit.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#what-you-are-doing",
+    "href": "assignments/lab3-group.html#what-you-are-doing",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "What you are doing",
+    "text": "What you are doing\nThis is the only group assignment in DSCI 521, and the only repository in the course that more than one person can write to. Your Milestone 2 repository is not touched here. You go back to it in Milestone 3.\nYou are in a group of 3 to 4. Together you build one (1) Quarto reveal.js slide deck that introduces your group to the class.\nBy the end of this lab your group has:\n\nOne shared repository with a Quarto presentation in it.\nFour question slides, chosen by your group, with every member’s answer on the same slide.\nOne personal slide per member, titled with that member’s name and CWL.\nA screenshot on each personal slide of a real merge conflict in a .qmd file.\nThe deck live on GitHub Pages, that URL in the repository’s About section, and a PDF export.\n\n\n\n\n\n\n\nImportantExploring merge conflicts are the point of this assignment\n\n\n\nWhat we are teaching is what happens when several people change the same file at the same time, and how you get out of it.\nIn this task, we do not expect you to try to avoid conflicts!: - Do not divide the work up to avoid each other. - Do not take turns. - Sit together in lab, open the same file, and type into it at once.\nYour changes are supposed to collide, to make your life easier, the assignment is graded based on you completing all the steps, not on how the slide deck looks or the content.\n\n\n\n\n\n\n\n\nNoteThe only new thing this week is merge conflicts\n\n\n\nYou have already done the rest in Weeks 1 and 2:\n\nclone, commit, push, pull\nbuild and render a Quarto document\npublish to GitHub Pages\n\nSo this assignment does not spell those out again. It says what the finished thing looks like and leaves the how to you.\nWhen you are stuck, go back to the lecture notes and the earlier milestones, read what your tools print at you, and talk to your group.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#your-group-and-your-repository",
+    "href": "assignments/lab3-group.html#your-group-and-your-repository",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "Your group and your repository",
+    "text": "Your group and your repository\nWe have created your repository and added every member to it. Find it in the github.ubc.ca GitHub Enterprise organization.\n\nEvery member has write access to the one repository.\nDo not fork it.\nDo not create branches.\nMake sure not clone it inside another Git repository, including your username.github.io folder.\n\n\n\n\n\n\n\nImportantThe repository starts private, and changing that is your job\n\n\n\nWe create these repositories private. While it stays private, nobody outside your group can open the repository. That includes us.\nBefore the deadline, change the visibility so the teaching team can open both. The setting is in the repository’s Settings.\n\nWe do not change it for you.\nWe do not chase it.\nA repository we cannot open is marked as missing.\n\nDo it early. It also controls whether your GitHub Pages URL works for anyone but you.\n\n\n\n\n\n\n\n\nTipHow to tell whether you got the visibility right\n\n\n\nAsk a classmate who is not in your group to open your repository and your slides URL.\nYour own group members can see both whatever the setting is, so checking on each other proves nothing. Someone outside the group is in the same position we are in when we grade.\nA 404 or a permission error means the setting is not right yet.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#read-this-before-you-start",
+    "href": "assignments/lab3-group.html#read-this-before-you-start",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "Read this before you start",
+    "text": "Read this before you start\nA few things catch people every year:\n\nA repository we cannot open is a repository we cannot grade. Changing the visibility is part of the assignment.\nWe grade the last commit timestamped before the deadline. Not the newest commit, and not what is on your laptop. Work has to be committed and pushed before the deadline.\nThe deck has to be live at its URL by the deadline. Pushing is not enough. GitHub takes a minute or two to build the site, so do not leave the last push to the last minute, as you might encounter errors you won’t be able to fix.\ngit pull origin main before you start typing, and again before you push.\nEveryone needs to make their own commits. We look at the history. One person committing for the group costs everyone in the group their marks.\n\nYour slides inherit the repository’s visibility. Once you open the repository up for grading, your group is no longer the only audience:\n\nEverything you put about yourself is voluntary.\nAnyone who can open the deck can screenshot it.\nSomeone other than you can change the visibility later.\n\nShare what you are comfortable sharing, and no more.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#step-1-agree-on-your-four-questions",
+    "href": "assignments/lab3-group.html#step-1-agree-on-your-four-questions",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "Step 1: Agree on your four questions",
+    "text": "Step 1: Agree on your four questions\nAs a group, pick four questions from this list. Everyone answers all four.\n\nWhere did you live before MDS, and what is one thing you miss about it?\nWhat did you do before MDS: a degree, a job, or both?\nWhat made you apply to MDS?\nWhat is one thing you want to be able to do by the end of the program?\nWhat is the best thing you have eaten in Vancouver so far?\nWhat do you do when you are not in front of a computer?\nWhat is a skill you have that has nothing to do with data science?\nWhat is the first piece of code you ever wrote, and what did it do?\nWhat has surprised you most about your first few weeks here?\nWhat is one recommendation for the class: a book, an album, a film, a restaurant, a trail, anything?\nWhat is your go-to move when you are completely stuck on a problem?\n\nKeep it something everyone is comfortable answering in public. Keep your answers short, and tag each answer by the group member. All answers should fit on a single slide.\n\n\n\n\n\n\nNoteYou do not have to answer anything personal\n\n\n\nAnswer at whatever depth you like, or answer as your interests rather than as yourself. If a question does not suit you, ask your group to pick a different one.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#step-2-build-the-deck",
+    "href": "assignments/lab3-group.html#step-2-build-the-deck",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "Step 2: Build the deck",
+    "text": "Step 2: Build the deck\nTextbook:\n\nIntroduction to Quarto and GitHub Pages\nQuarto, RMarkdown, and Jupyter Slides\n\nOne person sets this up, pushes it, and tells the group. Everyone else pulls before making any other changes.\nThe repository has to end up with:\n\nA Quarto reveal.js presentation at the top level, with its source named index.qmd. Work out what GitHub Pages does with a file called index.html and you will see why we ask for that name.\nA title slide with your group number and every member’s name.\nOne slide per chosen question, empty for now.\nWhatever else the site needs to render and be served. You did this in Milestone 2.\n\nDo not create the personal slides here yet. Each member adds their own in Step 5.\nTwo things to think about while you set it up:\n\nMilestone 2 had you create a file that stops GitHub from running Jekyll over your site. Your slides need it too.\nReveal.js can build self-contained slides, so the rendered .html carries its own resources instead of needing a folder of generated files beside it. Lecture 4 covers how to turn it on.\n\n\n\n\n\n\n\nNoteYou can set this up as a Quarto project\n\n\n\nA single index.qmd is enough. You can also make it a Quarto project with a _quarto.yml and control where things render from there, the way Milestone 2 did.\nEither is fine. The requirement is the slides URL, not the layout of the repository.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#step-3-answer-the-questions-all-at-the-same-time",
+    "href": "assignments/lab3-group.html#step-3-answer-the-questions-all-at-the-same-time",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "Step 3: Answer the questions, all at the same time",
+    "text": "Step 3: Answer the questions, all at the same time\nThis is the part that creates the conflicts.\nEach question gets one slide, and all of your answers go on that same slide. You do not each get your own question, and you do not each get your own slide.\nA finished question slide looks like this:\n## What made you apply to MDS?\n\n- **Ada**: I was writing the same pandas script at work every month\n  and wanted to know why it worked.\n- **Grace**: A professor told me my statistics were fine and my code was not.\n- **Alan**: I wanted to stop guessing and start measuring.\n- **Katherine**: Someone showed me a map made out of a spreadsheet.\nSo:\n\nEveryone opens index.qmd at the same time.\nEveryone adds their own answer to all four question slides.\nEveryone commits and pushes when they are done.\n\nThe first person to push succeeds. Everyone else is rejected, with a message mentioning fetch first or Updates were rejected. That is the point. Read what Git prints.\n\n\n\n\n\n\nNoteYou do not need the whole group present\n\n\n\nConflicts need two edits to the same place, not four people.\n\nIf only some of your group is in lab, work with whoever is there. Two of you editing the same slide is enough.\nYou can also create a conflict with yourself, by editing the file on GitHub in your browser and editing the same line on your laptop. That is how it was demonstrated in class. The recipe is in Step 5.\n\nEveryone still needs their own screenshot, so whoever is missing has to trigger their own conflict later.\n\n\n\n\n\n\n\n\nTipIf four answers do not fit on one slide\n\n\n\nFour answers on one slide can overflow, and reveal.js runs the text off the bottom without warning you.\nReveal.js has a built-in option that shrinks the text on your slides. It is one line in the YAML header. Find it in the Quarto reveal.js documentation, under presentation size and appearance.\nWe are not naming the option on purpose. Finding a setting in the documentation is part of what you are learning.\nShort answers are the other fix, and usually the better one.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#step-4-resolve-the-conflict",
+    "href": "assignments/lab3-group.html#step-4-resolve-the-conflict",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "Step 4: Resolve the conflict",
+    "text": "Step 4: Resolve the conflict\nTextbook: Git: History, Conflicts, and Ignores\nThis is the one part we do spell out. It is what you are here to learn.\nYour push was rejected because GitHub has commits you do not. Pull, and Git tries to combine their index.qmd with yours. Where two people changed the same place, Git stops and hands you the decision. It does that by writing both versions into your file, fenced with markers:\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n- **Ada**: I was writing the same pandas script at work every month.\n=======\n- **Grace**: A professor told me my statistics were fine and my code was not.\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; 3f9a1c2\nRead that as three parts:\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD to ======= is what you had.\n======= to &gt;&gt;&gt;&gt;&gt;&gt;&gt; 3f9a1c2 is what you pulled in.\n3f9a1c2 is the commit the incoming version came from.\n\n\n\n\n\n\n\nImportantScreenshot this now\n\n\n\nYou need a screenshot of these markers for Step 5. Take it while it is on your screen.\n\n\nThen:\n\nEdit the file so it says what you want it to say. Here that usually means keeping both answers: delete the three marker lines, leave both bullets. Git does not know whether you want your line, their line, both, or something new. You decide.\nMake sure no marker survives anywhere in the file. A leftover marker costs marks and breaks your render. grep is a fast way to check:\ngrep -n '&lt;&lt;&lt;&lt;&lt;&lt;&lt;\\|=======\\|&gt;&gt;&gt;&gt;&gt;&gt;&gt;' index.qmd\nThat should print nothing.\nCommit the resolution and push. Git tells you a merge is in progress and what it wants next. Read it rather than guessing.\n\nExpect to do this more than once. Four people and one file is not tidy.\n\n\n\n\n\n\nNoteIf your pull merged cleanly\n\n\n\nGit sometimes works out how to combine two people’s edits on its own. No conflict, no markers. That is normal. Git only stops when the changes overlap.\nYou still need a conflict to screenshot:\n\nAgree with one other member to change the same line, for example the same bullet on the same question slide.\nPush at the same time.\n\nTwo edits to one line is something Git will not decide for you. If your group has finished and you still have no screenshot, use the solo recipe in Step 5.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#step-5-your-own-slide",
+    "href": "assignments/lab3-group.html#step-5-your-own-slide",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "Step 5: Your own slide",
+    "text": "Step 5: Your own slide\nEach member adds one slide to index.qmd.\n\nTitle it with your name and your CWL, like ## Ada Lovelace (adalove). We use this for your individual marks, so get the CWL right.\nPut your merge conflict screenshot on it. Keep the images in one folder and name yours with your CWL, so four people adding screenshots do not overwrite each other.\nAdd anything else you like. The screenshot is the graded part.\n\n\n\n\n\n\n\nWarningWhat the screenshot has to show\n\n\n\nThe conflict inside the .qmd file, in your editor, with the &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, and &gt;&gt;&gt;&gt;&gt;&gt;&gt; markers visible and readable.\nThese do not count:\n\ngit status saying you have a conflict\nthe output of git pull origin main\nan editor’s “resolve conflict” button panel on its own\n\nYou are proving that you triggered a merge conflict and looked at it. The markers in the file are the proof.\nCrop it if you like, keep the file name visible if you can, and make the text large enough to read.\n\n\n\n\n\n\n\n\nNoteIf you are not with your group when you do this\n\n\n\nYou can create a real conflict with yourself, the same way we did it in class:\n\nEdit index.qmd on GitHub in your browser and commit the change there.\nOn your laptop, without pulling first, change the same line to something different and commit.\nPull.\n\nGit now has two versions of that line and hands you the conflict. Screenshot it, then resolve it as in Step 4.\nCheck that what you leave on GitHub is what you meant to keep. This is the fallback, not the plan.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#step-6-publish-and-export",
+    "href": "assignments/lab3-group.html#step-6-publish-and-export",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "Step 6: Publish and export",
+    "text": "Step 6: Publish and export\n\n\n\n\n\n\nImportantPick one person to render\n\n\n\nRendering overwrites index.html and whatever else your setup generates. If four people render and push that, you get conflicts in generated files. Those teach you nothing.\nPick one person for the final render and push. Everyone else stops editing index.qmd and pushes their last change first.\n\n\nThree things have to be true when you finish:\n\nThe slides are live at their GitHub Pages URL. How you get them there is up to you.\nRead git status before you push. Generated clutter such as .quarto, _site, and .DS_Store does not belong in the repository. Ignore files are covered in this week’s lecture and are a good way to handle it. We grade what ended up committed, not how you kept it out.\nThat URL is in the repository’s About section. That is the panel on the right of the repository’s main page on github.ubc.ca, edited with the gear icon. Put the slides URL in the Website field and add a one-line description.\nA PDF export of the deck is committed to the repository. The PDF should be in the repository alongside the slides, not only on your laptop. We open it from there.\nReveal.js slides are printed from the browser rather than rendered to PDF, which is not obvious the first time. Quarto: Presenting Slides has the route, including the ?print-pdf view and the print settings that make it look right.\n\n\n\n\n\n\n\nWarningCheck the live GitHub Pages site, not just your own machine\n\n\n\nWe grade your submission based on what we see online: in your repository and on your repository’s GitHub Pages. You need to make sure that everything works there, not only on your laptops.\nFor example, images are the typical problem: a path that works locally can break once the site is served.\n\nClick through every slide on the live site.\nHave someone outside your group open the URL too. That tests your visibility setting at the same time.\nDo not test in a private or incognito window. github.ubc.ca is behind your CWL login, so a logged-out browser shows a login page rather than your slides. That does not mean your site is broken.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#step-7-submit",
+    "href": "assignments/lab3-group.html#step-7-submit",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "Step 7: Submit",
+    "text": "Step 7: Submit\nGradescope only needs the URL of your group repository. Everything else is graded from the repository itself: the slides through the link in its About section, and the PDF from the files.\nSubmit the repository URL, not the rendered slides URL. A github.ubc.ca link that opens the repository page is what we want. A link that opens the slides is the wrong one, and we cannot get to your files from it.\n\n\n\n\n\n\nImportantOne submission per group (not one per person!)\n\n\n\nYour group makes one (1) submission, and the person who makes it adds the other members to it in Gradescope.\n\nDo not submit your own copy.\nAn individually submitted assignment does not count as submitted.\nIt is everyone’s responsibility to check that their own name is on the single group submission. Open it in Gradescope and look.\n\nIf your name is not on it, you have not submitted, whatever your group tells you.\n\n\nThe repository is graded at the last commit timestamped before the deadline. Submitting on Gradescope does not extend that, and neither does a push that lands a minute late.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#before-you-submit-check",
+    "href": "assignments/lab3-group.html#before-you-submit-check",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "Before you submit, check",
+    "text": "Before you submit, check\n\nThe deck is one index.qmd at the top level of the shared repository.\nIt renders as reveal.js slides.\nThere are four question slides.\nEvery member’s answer is on every question slide.\nThere is one personal slide per member, titled with that member’s name and CWL.\nEvery personal slide has a screenshot showing &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, and &gt;&gt;&gt;&gt;&gt;&gt;&gt; inside a .qmd file.\nThe screenshots are readable at full size.\nNo conflict markers are left anywhere in index.qmd.\nEvery member has at least one commit under their own GitHub account.\nEvery commit you want graded is pushed, and timestamped before the deadline.\nThe repository’s visibility has been changed so the teaching team can open it and the slides URL, confirmed by a classmate outside your group opening both.\nNobody worked on a fork or on a branch.\nWhatever the site needs in order to render is on GitHub, including the file that keeps Jekyll off it.\nNothing is committed that does not belong in the repository. Check the file list on GitHub, not just the folder on your laptop. The usual offenders are .quarto, _site, .DS_Store, and editor or operating system files.\nThe slides are live at their GitHub Pages URL.\nEvery slide and every image shows on the live site.\nThe slides URL is in the repository’s About section, in the Website field.\nThe PDF export is committed to the repository.\nThere is exactly one group submission on Gradescope, carrying the repository URL and not the slides URL.\nEvery member has checked that their own name is on that submission.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#grading",
+    "href": "assignments/lab3-group.html#grading",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "Grading",
+    "text": "Grading\nWe are not marking the content of your presentation, just the execution of steps.\n\n\n\n\n\n\n\nItem\nMarks\n\n\n\n\nDeck renders as reveal.js from index.qmd and is live on GitHub Pages\n2\n\n\nSlides URL is set in the repository’s About section\n1\n\n\nFour question slides, with every member’s answer on the same slide as everyone else’s\n5\n\n\nOne personal slide per member, titled with their name and CWL\n3\n\n\nEach member’s screenshot shows real conflict markers inside a .qmd file\n5\n\n\nEvery member has commits in the history under their own account\n2\n\n\nPDF export committed to the repository\n1\n\n\nOne group submission on Gradescope, with the repository URL and every member added\n1\n\n\nTotal\n20\n\n\n\nEvery mark is a group mark. The whole group gets the same score, including the screenshot and commit rows. If a member does not do their part, the group loses those marks.\nFiles that do not belong in the repository cost marks. We are not grading whether you have an ignore file, only what you committed.\nYou do not have to prove a conflict in the commit history. The screenshot is the evidence we want.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#if-your-group-is-short-handed",
+    "href": "assignments/lab3-group.html#if-your-group-is-short-handed",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "If your group is short-handed",
+    "text": "If your group is short-handed\nThe deadline does not move. If someone is unwell, away, or unreachable:\n\nTell your instructor by Thursday, as in the note at the top.\nSubmit what you have, with slides for the members who took part.\nSay so in the Gradescope submission.\n\nA group of three does everything with three answers per question slide instead of four.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
+    "objectID": "assignments/lab3-group.html#if-you-get-stuck",
+    "href": "assignments/lab3-group.html#if-you-get-stuck",
+    "title": "DSCI 521 Group Lab: Collaborative slides",
+    "section": "If you get stuck",
+    "text": "If you get stuck\nTextbook: Asking Effective Questions\nAsk in the 521_platforms-dsci Slack channel or come to office hours. Post the command you ran and the error message you got, not just “it did not work”.\nIf you have made a mess of the repository, say so early. Every conflict in this lab is recoverable, and untangling one with the isntructor’s or TA’s help in the lab is faster and teaches you more than deleting the repository and starting over.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "Lab 3 (Group)"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "DSCI 521: Computing Platforms for Data Science",
