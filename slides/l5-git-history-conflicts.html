@@ -1487,8 +1487,8 @@ index ea5b31d..0f73c7d 100644
 </div>
 </div>
 </section>
-<section id="situation-git-status-lists-the-same-file-twice" class="slide level2 smaller">
-<h2>Situation: git status lists the same file twice</h2>
+<section id="situation-i-want-to-compare-the-changes-in-more-detail" class="slide level2 smaller">
+<h2>Situation: I want to compare the changes in more detail</h2>
 <div class="columns">
 <div class="column" style="width:52%;">
 <div class="term">
@@ -1501,20 +1501,18 @@ Changes to be committed:
 Changes not staged for commit:
   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
   (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
-        <span class="tr">modified:   README.md</span></pre>
+        <span class="tr">modified:   analysis.qmd</span></pre>
 </div>
 <div class="term">
 <pre><span class="tp">$ git diff</span>
-diff --git a/README.md b/README.md
-index 8656b4a..20244b2 100644
---- a/README.md
-+++ b/README.md
-<span class="tc">@@ -6,3 +6,5 @@ Start date: 2026-09-01</span>
- 
- - Python 3.12
- - R
+diff --git a/analysis.qmd b/analysis.qmd
+index 8b151a2..f4413f7 100644
+--- a/analysis.qmd
++++ b/analysis.qmd
+<span class="tc">@@ -1 +1,3 @@</span>
+ library(tidyverse)
 <span class="tg">+</span>
-<span class="tg">+## Usage</span></pre>
+<span class="tg">+tea &lt;- read_csv(&quot;tea.csv&quot;)</span></pre>
 </div>
 </div><div class="column" style="width:48%;">
 <p><strong>Solution:</strong> <code>git diff</code> shows the changes that are not staged.</p>
@@ -1701,19 +1699,58 @@ Changes not staged for commit:
 Unstaged changes after reset:
 M   README.md
 
-<span class="tp">$ git reset --hard HEAD~1</span>
-HEAD is now at 77980d0 Accidentally delete dependencies</pre>
+<span class="tp">$ git status</span>
+On branch main
+Changes not staged for commit:
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+  (use &quot;git restore &lt;file&gt;...&quot; to discard changes in working directory)
+        <span class="tr">modified:   README.md</span>
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</pre>
 </div>
 </div><div class="column" style="width:48%;">
-<p><strong>Solution:</strong> <code>reset</code> trims the commits after <code>&lt;sha&gt;</code> from the local repo. The flag decides where their changes land.</p>
-<ul>
-<li><code>--soft</code>: staged, ready to commit again</li>
-<li>no flag: in the working directory, unstaged</li>
-<li><code>--hard</code>: gone from both</li>
-</ul>
-<p><code>HEAD~1</code> is one commit before the current one.</p>
-<p>Only while unpushed: a secret already on GitHub must be rotated.</p>
+<p><strong>Solution:</strong> <code>git reset &lt;sha&gt;</code> trims the commits after <code>&lt;sha&gt;</code> from the local repo. Their changes land back in the working directory, unstaged.</p>
+<p><code>HEAD~1</code> is one commit before the current one, so this resets to the commit before the mistake.</p>
 <p>The sha is the commit to reset <strong>to</strong>, not the one you cancel.</p>
+<p>Only while unpushed: a secret already on GitHub must be rotated.</p>
+</div></div>
+</section>
+<section id="same-reset---hard-the-changes-go-too" class="slide level2 smaller">
+<h2>Same reset, <code>--hard</code>: the changes go too</h2>
+<div class="columns">
+<div class="column" style="width:52%;">
+<div class="term">
+<pre><span class="tp">$ git reset --hard HEAD~1</span>
+HEAD is now at 5021352 Add dependency list
+
+<span class="tp">$ git status</span>
+On branch main
+nothing to commit, working tree clean</pre>
+</div>
+</div><div class="column" style="width:48%;">
+<p><strong>Solution:</strong> <code>--hard</code> does the same to the local repo, then overwrites your files as well.</p>
+<p>Nothing is left to unstage, which is why git prints no notice and status is clean.</p>
+<p>Use it when the work itself is the mistake. There is no undo.</p>
+<p>Only while unpushed: a secret already on GitHub must be rotated.</p>
+</div></div>
+</section>
+<section id="same-reset---soft-the-changes-stay-staged" class="slide level2 smaller">
+<h2>Same reset, <code>--soft</code>: the changes stay staged</h2>
+<div class="columns">
+<div class="column" style="width:52%;">
+<div class="term">
+<pre><span class="tp">$ git reset --soft HEAD~1</span>
+
+<span class="tp">$ git status</span>
+On branch main
+Changes to be committed:
+  (use &quot;git restore --staged &lt;file&gt;...&quot; to unstage)
+        <span class="tg">modified:   README.md</span></pre>
+</div>
+</div><div class="column" style="width:48%;">
+<p><strong>Solution:</strong> <code>--soft</code> trims the commit and leaves its changes staged, ready to commit again.</p>
+<p>Use it when the commit was right but its message was not, or when you forgot a file: reset, add the file, commit again.</p>
+<p>It prints nothing, so <code>git status</code> is how you see where the changes went.</p>
 </div></div>
 </section>
 <section id="situation-i-reset-and-now-push-is-refused" class="slide level2 smaller">
@@ -1977,8 +2014,8 @@ Auto-merging analysis.ipynb
 <h1>Reading the room</h1>
 
 </section>
-<section id="situation-first-status.-what-happens-when-you-pull" class="slide level2 smaller ask">
-<h2>Situation: first status. What happens when you pull?</h2>
+<section id="what-happens-when-you-pull" class="slide level2 smaller ask">
+<h2>What happens when you pull?</h2>
 <div class="columns">
 <div class="column" style="width:47%;">
 <div class="term">
@@ -1993,7 +2030,9 @@ Your branch is up to date with &#39;origin/main&#39;.
 On branch main
 Your branch is behind &#39;origin/main&#39; by 2 commits,
 and can be fast-forwarded.
-  (use &quot;git pull&quot; to update your local branch)</pre>
+  (use &quot;git pull&quot; to update your local branch)
+
+<span class="tp">$ git merge origin/main</span></pre>
 </div>
 <p><code>git fetch</code> downloads the remote’s new commits and updates <code>origin/main</code>. Your own files do not change.</p>
 </div><div class="column" style="width:53%;">
@@ -2002,16 +2041,16 @@ and can be fast-forwarded.
 shuffle_answers: true
 ---
 
-## You run `git pull` next. What does git do?
+## The fetch and the merge together are what `git pull` does. What will the merge do here?
 
-1. [x] Merges the fetched commits into your main
-    &gt; Pull is fetch plus merge. You committed nothing, so the merge has nothing to combine, and main catches up to where remote main already is. Git&#39;s word for that is on your screen: fast-forwarded.
-1. [ ] Merges the histories and stops for you to resolve a conflict
+1. [x] Move main up to origin/main, with nothing to combine
+    &gt; You committed nothing, so the merge has no work of yours to reconcile. Main catches up to where remote main already is. Git&#39;s word for that is on your screen: fast-forwarded.
+1. [ ] Combine your commits with theirs into a new commit
+    &gt; That is what a merge does when both sides have moved. Here only the remote moved.
+1. [ ] Stop and ask you to resolve a conflict
     &gt; A conflict needs commits on both sides touching the same lines. Only the remote moved here, so there is nothing of yours to disagree with.
-1. [ ] Does nothing: your copy already matches the remote
+1. [ ] Nothing: your copy already matches the remote
     &gt; That was the first status, answered from your own copy before the fetch. The second status, after the fetch, is the one that knows about the remote.
-1. [ ] Sends your commits to origin so both sides match
-    &gt; That is push, and it runs the other way. You have no commits to send.
 </div>
 </div></div>
 </section>
@@ -2076,7 +2115,7 @@ nothing added to commit but untracked files present</pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename=".gitignore"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href aria-hidden="true" tabindex="-1"></a>.DS_Store</span>
 <span id="cb5-2"><a href aria-hidden="true" tabindex="-1"></a>**/.ipynb_checkpoints/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><code>.gitignore</code> only covers files git is not already tracking. For a file you already committed: <code>git rm --cached data.csv</code>, then commit. The file stays on your computer, and stays in the old commits.</p>
+<p><code>.gitignore</code> only covers files git is not already tracking. For a file you already committed: <code>git rm --cached data.csv</code>, then commit. The file stays in your working directory <em>and in the old commits</em>.</p>
 </div></div>
 </section>
 <section id="how-confident-do-we-feel-about-the-conflict-you-are-about-to-create" class="slide level2 ask" data-background-color="#f4ecdd">
