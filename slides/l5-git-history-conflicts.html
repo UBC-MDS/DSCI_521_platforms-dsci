@@ -1736,13 +1736,13 @@ On branch main
 nothing to commit, working tree clean</pre>
 </div>
 </div><div class="column" style="width:48%;">
-<p><strong>Solution:</strong> same command, same commits removed from main. The flag decides how much else git rewinds.</p>
+<p><strong>Solution:</strong> same command, same commits removed from main. The flag decides how much else git changes.</p>
 <ul>
 <li><code>--soft</code>: nothing else, so the changes show as staged</li>
-<li>no flag: the staging area, so they show as unstaged</li>
-<li><code>--hard</code>: your files too, overwritten from <code>&lt;sha&gt;</code>, and the work is gone</li>
+<li>no flag: only resets the staging area, so the changes show as unstaged</li>
+<li><code>--hard</code>: your working directory gets overwritten from commit <code>&lt;sha&gt;</code> too, so your work is gone</li>
 </ul>
-<p>Reach for <code>--soft</code> when the message was wrong or you forgot a file: reset, add, commit again.</p>
+<p>Use <code>--soft</code> for a wrong message or a forgotten file.</p>
 <p>Only while unpushed: a secret already on GitHub must be rotated.</p>
 </div></div>
 </section>
