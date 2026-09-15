@@ -1709,7 +1709,7 @@ Changes not staged for commit:
 no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;)</pre>
 </div>
 </div><div class="column" style="width:48%;">
-<p><strong>Solution:</strong> <code>git reset &lt;sha&gt;</code> trims the commits after <code>&lt;sha&gt;</code> from the local repo. Their changes land back in the working directory, unstaged.</p>
+<p><strong>Solution:</strong> <code>git reset &lt;sha&gt;</code> sets main to point at <code>&lt;sha&gt;</code>. It leaves your working directory unchanged, so you still have all the changes from those commits in your files, ready to fix and commit again.</p>
 <p><code>HEAD~1</code> is one commit before the current one, so this resets to the commit before the mistake.</p>
 <p>The sha is the commit to reset <strong>to</strong>, not the one you cancel.</p>
 <p>Only while unpushed: a secret already on GitHub must be rotated.</p>
@@ -1736,12 +1736,13 @@ On branch main
 nothing to commit, working tree clean</pre>
 </div>
 </div><div class="column" style="width:48%;">
-<p><strong>Solution:</strong> same command, same trimmed commits. The flag decides where their changes land.</p>
+<p><strong>Solution:</strong> same command, same commits removed from main. The flag decides how much else git rewinds.</p>
 <ul>
-<li><code>--soft</code>: staged, ready to commit again</li>
-<li><code>--hard</code>: your files are overwritten too, and there is no undo</li>
+<li><code>--soft</code>: nothing else, so the changes show as staged</li>
+<li>no flag: the staging area, so they show as unstaged</li>
+<li><code>--hard</code>: your files too, overwritten from <code>&lt;sha&gt;</code>, and the work is gone</li>
 </ul>
-<p>Reach for <code>--soft</code> when the commit was right but its message was not, or when you forgot a file: reset, add the file, commit again.</p>
+<p>Reach for <code>--soft</code> when the message was wrong or you forgot a file: reset, add, commit again.</p>
 <p>Only while unpushed: a secret already on GitHub must be rotated.</p>
 </div></div>
 </section>
@@ -1786,7 +1787,7 @@ shuffle_answers: true
 1. [x] `git reset --hard <previous_commit_sha>`
     &gt; Branch moves back and the changes are discarded. That is the full-erase case.
 1. [ ] `git reset <previous_commit_sha>`
-    &gt; Moves main back but keeps the changes in your working directory. The mistake would still be sitting there.
+    &gt; Moves main back and leaves your files alone, so the mistake would still be sitting there, uncommitted.
 1. [ ] `git revert <bad_commit_sha>`
     &gt; Undoes the changes but keeps both commits in history. You wanted it gone from history.
 1. [ ] `git restore <file_name>`
@@ -1803,7 +1804,7 @@ shuffle_answers: true
 ## Same mistake, no collaborators, but you want the commit gone and its changes back in your working files, ready to fix and recommit. What do you run?
 
 1. [x] `git reset <previous_commit_sha>`
-    &gt; Branch moves back, changes return to the working directory. Fix, add, commit again.
+    &gt; Main moves back and your files are left alone, so the changes are uncommitted again. Fix, add, commit again.
 1. [ ] `git reset --hard <previous_commit_sha>`
     &gt; This erases the changes too. You wanted to keep the work.
 1. [ ] `git revert <bad_commit_sha>`
