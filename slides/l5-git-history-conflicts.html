@@ -1932,7 +1932,7 @@ hint:   git config pull.ff only       # fast-forward only
 </ul>
 <p>Rebase and fast-forward-only are the other two. You will meet them in 524.</p>
 <p>You can also set it once: <code>git config --global pull.rebase false</code></p>
-<p>If a pull has stopped on a conflict you do not want to resolve now, <code>git merge --abort</code> returns the repository to where it was before the pull.</p>
+<p>If a pull has stopped on a conflict you do not want to resolve now, <code>git merge --abort</code> tries to put the repository back to before the pull. Commit or stash first, or it may not manage.</p>
 </div></div>
 </section>
 <section id="situation-the-pull-went-through-and-now-the-file-has-arrows-in-it" class="slide level2 smaller">
