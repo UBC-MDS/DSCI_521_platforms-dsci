@@ -1113,8 +1113,10 @@ DSCI 521
 <pre><span class="tp">$ git push origin main</span>
  <span class="tr">! [rejected]        main -&gt; main (fetch first)</span>
 <span class="tr">error: failed to push some refs</span>
-hint: Updates were rejected because the remote
-hint: contains work that you do not have locally.
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., &#39;git pull ...&#39;) before pushing again.
 
 <span class="tp">$ git fetch origin</span>
 
@@ -1226,7 +1228,7 @@ and have 1 and 2 different commits each.
 </div>
 </div>
 </div>
-<p>You have one commit. Grace and Ben made one each. Both branches start from the same parent. Neither side is a continuation of the other, git does not know how to reconcile it and rejects your push.</p>
+<p>You have one commit. Grace and Ben made one each. Both branches start from the same parent. Neither side is a continuation of the other, git won’t decide for you how to reconcile it, and rejects your push.</p>
 </div></div>
 </section>
 <section id="solution-pull-then-push" class="slide level2 smaller">
@@ -1236,7 +1238,6 @@ and have 1 and 2 different commits each.
 <div class="term">
 <pre><span class="tp">$ git pull --no-rebase origin main</span>
 Auto-merging index.qmd
-hint: Waiting for your editor to close the file...
 <span class="tg">Merge made by the &#39;ort&#39; strategy.</span>
  index.qmd | 4 ++++
 
@@ -1402,7 +1403,6 @@ shuffle_answers: true
 <div class="term">
 <pre><span class="tp">$ git pull --no-rebase origin main</span>
 Auto-merging index.qmd
-hint: Waiting for your editor to close the file...
 <span class="tg">Merge made by the &#39;ort&#39; strategy.</span>
  index.qmd | 4 ++++
  1 file changed, 4 insertions(+)</pre>
@@ -1422,6 +1422,7 @@ hint: Waiting for your editor to close the file...
 <p><strong>With a teammate:</strong> agree to change the same line, or lines right next to each other, for example the same bullet on the same question slide. Both commit, both push.</p>
 <p><strong>If you fly Solo:</strong> edit <code>index.qmd</code> on github.ubc.ca in the browser and commit there, then change the same line on your laptop without pulling, commit, and pull.</p>
 <p>In both cases, two commits now change one area, and git will make you resolve it.</p>
+<p>Make the two edits different. If you both type the same text, git merges it silently and you get no conflict to screenshot.</p>
 </div><div class="column" style="width:48%;">
 <div class="cell" data-fig-width="4.6" data-fig-height="2.6" data-layout-align="default">
 <div class="cell-output-display">
@@ -1566,22 +1567,20 @@ commit the result.</span></pre>
 <p><strong>In the milestone: Screenshot this now.</strong></p>
 </div></div>
 </section>
-<section id="solution-edit-delete-all-three-markers-add-commit" class="slide level2 smaller">
+<section id="solution-edit-delete-all-three-markers-add-commit" class="slide level2 smaller tighter">
 <h2>Solution: edit, delete all three markers, add, commit</h2>
 <div class="columns">
 <div class="column" style="width:52%;">
 <div class="term">
-<pre><span class="tp">$ git diff --check</span>
-
-<span class="tp">$ git add index.qmd</span>
+<pre><span class="tp">$ git add index.qmd</span>
 <span class="tp">$ git commit</span>
 <span class="tp">$ git push origin main</span></pre>
 </div>
-<p><code>git diff --check</code> lists any leftover conflict markers and where they are (files and lines).</p>
 </div><div class="column" style="width:48%;">
 <p>Git hands the decision about what the conflicting part should say to <em>you</em>.</p>
 <p>You can keep one version (I like mine more!), keep both (in the milestone different students answering to the same question and all should stay on the slide, just put them in order), or write something completely different.</p>
 <p>Two steps to resolve: decide what to keep and delete the markers, then add and commit. Git enforces only the second, so dealing with the markers is your responsibility.</p>
+<p>As with the pull, <code>git commit</code> opens an editor on the merge message. The merge is not finished until you close it.</p>
 </div></div>
 </section>
 <section id="situation-you-fixed-the-file-and-git-still-refuses" class="slide level2 smaller">
@@ -1592,20 +1591,18 @@ commit the result.</span></pre>
 <pre><span class="tp">$ git commit -m &quot;fixed the conflict&quot;</span>
 <span class="tr">error: Committing is not possible because you
 have unmerged files.</span>
-hint: Fix them up in the work tree, and then use
-hint: &#39;git add/rm &lt;file&gt;&#39; as appropriate to mark
-hint: resolution and make a commit.
+hint: Fix them up in the work tree, and then use &#39;git add/rm &lt;file&gt;&#39;
+hint: as appropriate to mark resolution and make a commit.
 <span class="tr">fatal: Exiting because of an unresolved conflict.</span>
 
 <span class="tp">$ git status --short</span>
 <span class="tr">UU index.qmd</span></pre>
-<p><code>UU</code> in the short status is git saying that both sides changed this file and nobody has resolved it.</p>
 </div>
+<p><code>UU</code> in the short status is git saying that both sides changed this file and nobody has resolved it.</p>
 </div><div class="column" style="width:45%;">
 <p><strong>When it happens:</strong> you deleted the markers, saved the file, and went straight to <code>git commit</code> without <code>git add</code> first.</p>
 <ul>
-<li>Until you stage the file, git still counts the file as unmerged, so <code>commit</code> and <code>pull</code> both refuse to proceed (git does not track your resolution of the conflict).</li>
-<li><code>push</code> might go through, but it means it just sends your earlier commits and leaves you sitting here with the conflict.</li>
+<li>Until you stage the file, git still counts the file as unmerged, so <code>commit</code> and <code>pull</code> both refuse to proceed.</li>
 </ul>
 <p><strong>Solution:</strong> <code>git add index.qmd</code>, then <code>git commit</code>. Editing is half of it; <code>add</code> is how you tell git the file is settled.</p>
 </div></div>
@@ -1634,18 +1631,20 @@ you merge.
 <div class="column" style="width:55%;">
 <div class="term">
 <pre><span class="tp">$ git stash</span>
-Saved working directory and index state
-WIP on main: 82b74c9 Ada answers Q1
+Saved working directory and index state WIP on main: 82b74c9 Ada answers Q1
 
 <span class="tp">$ git pull --no-rebase origin main</span>
+Updating 82b74c9..0a566a1
 <span class="tg">Fast-forward</span>
  index.qmd | 1 +
 
 <span class="tp">$ git stash pop</span>
+Auto-merging index.qmd
+<span class="tr">CONFLICT (content): Merge conflict in index.qmd</span>
     <span class="tr">both modified:   index.qmd</span>
 The stash entry is kept in case you need it again.</pre>
-<p>Strategy: not to avoid conflict, but chose the best moment to deal with it (when you have all info!)</p>
 </div>
+<p>Strategy: not to avoid conflict, but chose the best moment to deal with it (when you have all info!)</p>
 </div><div class="column" style="width:45%;">
 <p>The way out is to pick the moment you deal with it.</p>
 <p><code>git stash</code>, pull, <code>git stash pop</code>.</p>
@@ -1666,6 +1665,9 @@ hint:
 hint:   git config pull.rebase false  # merge
 hint:   git config pull.rebase true   # rebase
 hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can also pass --rebase, --no-rebase, or --ff-only on the
+hint: command line to override the configured default per invocation.
 <span class="tr">fatal: Need to specify how to reconcile divergent
 branches.</span></pre>
 </div>
@@ -1678,7 +1680,7 @@ shuffle_answers: true
 ## Read the status. What is git waiting for?
 
 1. [x] A choice of strategy: run `git pull --no-rebase origin main`
-    &gt; Git will not pick a strategy for you. `--no-rebase` tells it to use merge.
+    &gt; Once the two histories have diverged, git will not choose for you. `--no-rebase` tells it to merge.
 1. [ ] A conflict resolution: edit the file and commit
     &gt; Nothing has merged yet, so there is nothing to edit. This refusal comes before merge starts.
 1. [ ] A push: run `git push origin main`
@@ -1831,6 +1833,7 @@ shuffle_answers: true
 </div>
 </div>
 <ul>
+<li><code>git revert</code> opens an editor on the commit message; the revert is not finished until you close it</li>
 <li>revert creates another commit to undo the one you don’t like, both of them stay in history</li>
 <li>your happy crew gets fixed version with the next <code>pull</code>, nothing breaks (well, in git history).</li>
 </ul>
@@ -1872,7 +1875,7 @@ M   index.qmd
 <div>
 <p></p><figure class><p></p>
 <div>
-<svg width="442" height="154" viewbox="0.00 0.00 250.07 44.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<svg width="442" height="154" viewbox="0.00 0.00 279.57 44.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 40)">
 <title>G</title>
 <!-- repo -->
@@ -1885,17 +1888,17 @@ M   index.qmd
 <!-- stage -->
 <g id="node2" class="node">
 <title>stage</title>
-<path fill="#f2b8b5" stroke="#c8ccd4" d="M137.82,-36C137.82,-36 102.75,-36 102.75,-36 96.75,-36 90.75,-30 90.75,-24 90.75,-24 90.75,-12 90.75,-12 90.75,-6 96.75,0 102.75,0 102.75,0 137.82,0 137.82,0 143.82,0 149.82,-6 149.82,-12 149.82,-12 149.82,-24 149.82,-24 149.82,-30 143.82,-36 137.82,-36" />
-<text text-anchor="middle" x="120.28" y="-20.7" font-family="Helvetica,sans-Serif" font-size="9.00">staging area</text>
-<text text-anchor="middle" x="120.28" y="-9.9" font-family="Helvetica,sans-Serif" font-size="9.00">cleared</text>
+<path fill="#f2b8b5" stroke="#c8ccd4" d="M167.56,-36C167.56,-36 102.5,-36 102.5,-36 96.5,-36 90.5,-30 90.5,-24 90.5,-24 90.5,-12 90.5,-12 90.5,-6 96.5,0 102.5,0 102.5,0 167.56,0 167.56,0 173.56,0 179.56,-6 179.56,-12 179.56,-12 179.56,-24 179.56,-24 179.56,-30 173.56,-36 167.56,-36" />
+<text text-anchor="middle" x="135.03" y="-20.7" font-family="Helvetica,sans-Serif" font-size="9.00">staging area</text>
+<text text-anchor="middle" x="135.03" y="-9.9" font-family="Helvetica,sans-Serif" font-size="9.00">reset to that commit</text>
 </g>
 <!-- repo&#45;&gt;stage -->
 <!-- work -->
 <g id="node3" class="node">
 <title>work</title>
-<path fill="#9ad4ea" stroke="#c8ccd4" d="M230.09,-36C230.09,-36 176.04,-36 176.04,-36 170.04,-36 164.04,-30 164.04,-24 164.04,-24 164.04,-12 164.04,-12 164.04,-6 170.04,0 176.04,0 176.04,0 230.09,0 230.09,0 236.09,0 242.09,-6 242.09,-12 242.09,-12 242.09,-24 242.09,-24 242.09,-30 236.09,-36 230.09,-36" />
-<text text-anchor="middle" x="203.06" y="-20.7" font-family="Helvetica,sans-Serif" font-size="9.00">working directory</text>
-<text text-anchor="middle" x="203.06" y="-9.9" font-family="Helvetica,sans-Serif" font-size="9.00">UNTOUCHED</text>
+<path fill="#9ad4ea" stroke="#c8ccd4" d="M259.58,-36C259.58,-36 205.53,-36 205.53,-36 199.53,-36 193.53,-30 193.53,-24 193.53,-24 193.53,-12 193.53,-12 193.53,-6 199.53,0 205.53,0 205.53,0 259.58,0 259.58,0 265.58,0 271.58,-6 271.58,-12 271.58,-12 271.58,-24 271.58,-24 271.58,-30 265.58,-36 259.58,-36" />
+<text text-anchor="middle" x="232.55" y="-20.7" font-family="Helvetica,sans-Serif" font-size="9.00">working directory</text>
+<text text-anchor="middle" x="232.55" y="-9.9" font-family="Helvetica,sans-Serif" font-size="9.00">UNTOUCHED</text>
 </g>
 <!-- stage&#45;&gt;work -->
 </g>
@@ -1932,18 +1935,18 @@ HEAD is now at ba5be14 Ada answers Q1
 <div>
 <p></p><figure class><p></p>
 <div>
-<svg width="442" height="250" viewbox="0.00 0.00 260.01 176.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
+<svg width="442" height="250" viewbox="0.00 0.00 293.04 176.00" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none; display: block; margin: auto auto auto auto">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 172)">
 <title>G</title>
 <g id="clust2" class="cluster">
 <title>cluster_s</title>
-<path fill="transparent" stroke="#c8ccd4" d="M20,-88C20,-88 221.77,-88 221.77,-88 227.77,-88 233.77,-94 233.77,-100 233.77,-100 233.77,-148 233.77,-148 233.77,-154 227.77,-160 221.77,-160 221.77,-160 20,-160 20,-160 14,-160 8,-154 8,-148 8,-148 8,-100 8,-100 8,-94 14,-88 20,-88" />
-<text text-anchor="middle" x="120.88" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00">--soft</text>
+<path fill="transparent" stroke="#c8ccd4" d="M20,-88C20,-88 254.79,-88 254.79,-88 260.79,-88 266.79,-94 266.79,-100 266.79,-100 266.79,-148 266.79,-148 266.79,-154 260.79,-160 254.79,-160 254.79,-160 20,-160 20,-160 14,-160 8,-154 8,-148 8,-148 8,-100 8,-100 8,-94 14,-88 20,-88" />
+<text text-anchor="middle" x="137.4" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00">--soft</text>
 </g>
 <g id="clust1" class="cluster">
 <title>cluster_h</title>
-<path fill="transparent" stroke="#c8ccd4" d="M20,-8C20,-8 232.01,-8 232.01,-8 238.01,-8 244.01,-14 244.01,-20 244.01,-20 244.01,-68 244.01,-68 244.01,-74 238.01,-80 232.01,-80 232.01,-80 20,-80 20,-80 14,-80 8,-74 8,-68 8,-68 8,-20 8,-20 8,-14 14,-8 20,-8" />
-<text text-anchor="middle" x="126.01" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">--hard</text>
+<path fill="transparent" stroke="#c8ccd4" d="M20,-8C20,-8 265.04,-8 265.04,-8 271.04,-8 277.04,-14 277.04,-20 277.04,-20 277.04,-68 277.04,-68 277.04,-74 271.04,-80 265.04,-80 265.04,-80 20,-80 20,-80 14,-80 8,-74 8,-68 8,-68 8,-20 8,-20 8,-14 14,-8 20,-8" />
+<text text-anchor="middle" x="142.52" y="-67" font-family="Helvetica,sans-Serif" font-size="10.00">--hard</text>
 </g>
 <!-- h1 -->
 <g id="node1" class="node">
@@ -1955,17 +1958,17 @@ HEAD is now at ba5be14 Ada answers Q1
 <!-- h2 -->
 <g id="node2" class="node">
 <title>h2</title>
-<path fill="#f2b8b5" stroke="#c8ccd4" d="M135.52,-52C135.52,-52 105.52,-52 105.52,-52 99.52,-52 93.52,-46 93.52,-40 93.52,-40 93.52,-28 93.52,-28 93.52,-22 99.52,-16 105.52,-16 105.52,-16 135.52,-16 135.52,-16 141.52,-16 147.52,-22 147.52,-28 147.52,-28 147.52,-40 147.52,-40 147.52,-46 141.52,-52 135.52,-52" />
-<text text-anchor="middle" x="120.52" y="-36.7" font-family="Helvetica,sans-Serif" font-size="9.00">staging</text>
-<text text-anchor="middle" x="120.52" y="-25.9" font-family="Helvetica,sans-Serif" font-size="9.00">cleared</text>
+<path fill="#f2b8b5" stroke="#c8ccd4" d="M168.56,-52C168.56,-52 105.5,-52 105.5,-52 99.5,-52 93.5,-46 93.5,-40 93.5,-40 93.5,-28 93.5,-28 93.5,-22 99.5,-16 105.5,-16 105.5,-16 168.56,-16 168.56,-16 174.56,-16 180.56,-22 180.56,-28 180.56,-28 180.56,-40 180.56,-40 180.56,-46 174.56,-52 168.56,-52" />
+<text text-anchor="middle" x="137.03" y="-36.7" font-family="Helvetica,sans-Serif" font-size="9.00">staging</text>
+<text text-anchor="middle" x="137.03" y="-25.9" font-family="Helvetica,sans-Serif" font-size="9.00">reset to that commit</text>
 </g>
 <!-- h1&#45;&gt;h2 -->
 <!-- h3 -->
 <g id="node3" class="node">
 <title>h3</title>
-<path fill="#f2b8b5" stroke="#c8ccd4" d="M224.26,-52C224.26,-52 173.27,-52 173.27,-52 167.27,-52 161.27,-46 161.27,-40 161.27,-40 161.27,-28 161.27,-28 161.27,-22 167.27,-16 173.27,-16 173.27,-16 224.26,-16 224.26,-16 230.26,-16 236.26,-22 236.26,-28 236.26,-28 236.26,-40 236.26,-40 236.26,-46 230.26,-52 224.26,-52" />
-<text text-anchor="middle" x="198.77" y="-36.7" font-family="Helvetica,sans-Serif" font-size="9.00">files</text>
-<text text-anchor="middle" x="198.77" y="-25.9" font-family="Helvetica,sans-Serif" font-size="9.00">OVERWRITTEN</text>
+<path fill="#f2b8b5" stroke="#c8ccd4" d="M257.29,-52C257.29,-52 206.29,-52 206.29,-52 200.29,-52 194.29,-46 194.29,-40 194.29,-40 194.29,-28 194.29,-28 194.29,-22 200.29,-16 206.29,-16 206.29,-16 257.29,-16 257.29,-16 263.29,-16 269.29,-22 269.29,-28 269.29,-28 269.29,-40 269.29,-40 269.29,-46 263.29,-52 257.29,-52" />
+<text text-anchor="middle" x="231.79" y="-36.7" font-family="Helvetica,sans-Serif" font-size="9.00">files</text>
+<text text-anchor="middle" x="231.79" y="-25.9" font-family="Helvetica,sans-Serif" font-size="9.00">OVERWRITTEN</text>
 </g>
 <!-- h2&#45;&gt;h3 -->
 <!-- s1 -->
@@ -1978,17 +1981,17 @@ HEAD is now at ba5be14 Ada answers Q1
 <!-- s2 -->
 <g id="node5" class="node">
 <title>s2</title>
-<path fill="#a9dfae" stroke="#c8ccd4" d="M135.52,-132C135.52,-132 105.52,-132 105.52,-132 99.52,-132 93.52,-126 93.52,-120 93.52,-120 93.52,-108 93.52,-108 93.52,-102 99.52,-96 105.52,-96 105.52,-96 135.52,-96 135.52,-96 141.52,-96 147.52,-102 147.52,-108 147.52,-108 147.52,-120 147.52,-120 147.52,-126 141.52,-132 135.52,-132" />
-<text text-anchor="middle" x="120.52" y="-116.7" font-family="Helvetica,sans-Serif" font-size="9.00">staging</text>
-<text text-anchor="middle" x="120.52" y="-105.9" font-family="Helvetica,sans-Serif" font-size="9.00">KEPT</text>
+<path fill="#a9dfae" stroke="#c8ccd4" d="M152.03,-132C152.03,-132 122.03,-132 122.03,-132 116.03,-132 110.03,-126 110.03,-120 110.03,-120 110.03,-108 110.03,-108 110.03,-102 116.03,-96 122.03,-96 122.03,-96 152.03,-96 152.03,-96 158.03,-96 164.03,-102 164.03,-108 164.03,-108 164.03,-120 164.03,-120 164.03,-126 158.03,-132 152.03,-132" />
+<text text-anchor="middle" x="137.03" y="-116.7" font-family="Helvetica,sans-Serif" font-size="9.00">staging</text>
+<text text-anchor="middle" x="137.03" y="-105.9" font-family="Helvetica,sans-Serif" font-size="9.00">KEPT</text>
 </g>
 <!-- s1&#45;&gt;s2 -->
 <!-- s3 -->
 <g id="node6" class="node">
 <title>s3</title>
-<path fill="#9ad4ea" stroke="#c8ccd4" d="M213.77,-132C213.77,-132 183.77,-132 183.77,-132 177.77,-132 171.77,-126 171.77,-120 171.77,-120 171.77,-108 171.77,-108 171.77,-102 177.77,-96 183.77,-96 183.77,-96 213.77,-96 213.77,-96 219.77,-96 225.77,-102 225.77,-108 225.77,-108 225.77,-120 225.77,-120 225.77,-126 219.77,-132 213.77,-132" />
-<text text-anchor="middle" x="198.77" y="-116.7" font-family="Helvetica,sans-Serif" font-size="9.00">files</text>
-<text text-anchor="middle" x="198.77" y="-105.9" font-family="Helvetica,sans-Serif" font-size="9.00">untouched</text>
+<path fill="#9ad4ea" stroke="#c8ccd4" d="M246.79,-132C246.79,-132 216.79,-132 216.79,-132 210.79,-132 204.79,-126 204.79,-120 204.79,-120 204.79,-108 204.79,-108 204.79,-102 210.79,-96 216.79,-96 216.79,-96 246.79,-96 246.79,-96 252.79,-96 258.79,-102 258.79,-108 258.79,-108 258.79,-120 258.79,-120 258.79,-126 252.79,-132 246.79,-132" />
+<text text-anchor="middle" x="231.79" y="-116.7" font-family="Helvetica,sans-Serif" font-size="9.00">files</text>
+<text text-anchor="middle" x="231.79" y="-105.9" font-family="Helvetica,sans-Serif" font-size="9.00">untouched</text>
 </g>
 <!-- s2&#45;&gt;s3 -->
 </g>
@@ -2004,7 +2007,7 @@ HEAD is now at ba5be14 Ada answers Q1
 <li><code>--hard</code> prints the commit it got back to <strong>and resets your working directory to that commit as well</strong>.</li>
 </ul>
 <p>Case for <code>--soft</code>: “i forgot to add a file to commit, i do soft reset, stage the missing file, commit again”.</p>
-<p><code>--hard</code> also throws away: uncommitted edits in tracked files and staged files (but it will not remove <em>untracked</em> files in the same folder).</p>
+<p><code>--hard</code> also throws away: uncommitted edits in tracked files and staged files, and might erase untracked files.</p>
 </div></div>
 </section>
 <section id="which-situation-and-what-do-you-do-next-2" class="slide level2 smaller ask">
