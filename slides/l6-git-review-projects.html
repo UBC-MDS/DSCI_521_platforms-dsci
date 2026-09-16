@@ -1236,6 +1236,7 @@ and have 1 and 2 different commits each.
 <div class="term">
 <pre><span class="tp">$ git pull --no-rebase origin main</span>
 Auto-merging index.qmd
+hint: Waiting for your editor to close the file...
 <span class="tg">Merge made by the &#39;ort&#39; strategy.</span>
  index.qmd | 4 ++++
 
@@ -1401,13 +1402,15 @@ shuffle_answers: true
 <div class="term">
 <pre><span class="tp">$ git pull --no-rebase origin main</span>
 Auto-merging index.qmd
+hint: Waiting for your editor to close the file...
 <span class="tg">Merge made by the &#39;ort&#39; strategy.</span>
  index.qmd | 4 ++++
  1 file changed, 4 insertions(+)</pre>
 </div>
 <p>No markers and no decision: git combined both edits by itself, because you and your teammate touched different areas of the file.</p>
+<p>Git opens an editor on the merge message. The merge is not finished until you close it.</p>
 </div><div class="column" style="width:45%;">
-<p>Git stops when both sides changed the same area. Lines right next to each other count too: edits one line apart still collide.</p>
+<p>Git stops when both sides changed the same area. Modified lines next to each other will likely conflict too (git says “same area”), inserts need to be at the same line to clash.</p>
 <p>It also stops if one side deleted a file the other side edited. There are no markers to fix there, just a decision: keep the file or drop it.</p>
 </div></div>
 </section>
@@ -1485,7 +1488,7 @@ commit the result.</span></pre>
 - **Ada**: the same pandas script at work every month.
 <span class="tr">=======</span>
 - **Ada**: the same pandas script every month (typo fixed).
-<span class="tr">&gt;&gt;&gt;&gt;&gt;&gt;&gt; dac5a36</span></pre>
+<span class="tr">&gt;&gt;&gt;&gt;&gt;&gt;&gt; fdd19ce12939a81e5fd460337e1be506592b7eec</span></pre>
 </div>
 <div class="cell" data-fig-width="5.4" data-fig-height="1.5" data-layout-align="default">
 <div class="cell-output-display">
@@ -1557,7 +1560,7 @@ commit the result.</span></pre>
 <ul>
 <li><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> to <code>=======</code> is <strong>your side</strong></li>
 <li><code>=======</code> to <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> is <strong>the remote side</strong></li>
-<li><code>dac5a36</code> is the commit the remote side came from, sometimes a name instead of a sha</li>
+<li><code>fdd19ce12939a81e5fd460337e1be506592b7eec</code> is the commit the remote side came from, sometimes a name instead of a sha</li>
 </ul>
 <p>Positron and VS Code label the same two sides <em>Current</em> and <em>Incoming</em>.</p>
 <p><strong>In the milestone: Screenshot this now.</strong></p>
