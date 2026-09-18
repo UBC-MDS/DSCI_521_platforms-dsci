@@ -761,7 +761,7 @@ If you get a **404** page:
 
 ## Step 9: Submit
 
-Make a PDF that contains two URLs:
+Submit two URLs on Gradescope:
 
 1. Your repository:
 
@@ -775,7 +775,8 @@ Make a PDF that contains two URLs:
    https://username.github.io
    ```
 
-Upload that PDF to Gradescope.
+There is nothing to upload.
+Paste each URL into its box on Gradescope.
 
 Check that your repository URL starts with `github.com`.
 A `github.ubc.ca` link points at the wrong place and cannot be graded.
@@ -809,7 +810,7 @@ A `github.ubc.ca` link points at the wrong place and cannot be graded.
       phone numbers,
       home address,
       or other private information is on the site.
-- [ ] The PDF with both URLs is on Gradescope.
+- [ ] Both URLs are submitted on Gradescope.
 
 
 ## Grading
