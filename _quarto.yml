@@ -34,6 +34,8 @@ website:
             text: "Milestone 2"
           - href: assignments/lab3-group.qmd
             text: "Lab 3 (Group)"
+          - href: assignments/milestone3.qmd
+            text: "Milestone 3"
 
 format:
   html:

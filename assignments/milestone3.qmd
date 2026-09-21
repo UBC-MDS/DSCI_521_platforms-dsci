@@ -1,0 +1,540 @@
+---
+title: "DSCI 521 Milestone 3"
+subtitle: "Reproducible environments and two computational posts"
+format:
+  html:
+    toc: true
+---
+
+See the [assessment table](../index.qmd#assessments) on the home page
+for the weight,
+due date,
+and where to submit.
+
+## What you are doing
+
+You are going back to the website from Milestone 2 and making it reproducible.
+
+1. Add **two computational posts**,
+   one Quarto with R,
+   one Quarto with Python.
+2. **Pin one environment per language** and commit the lockfiles:
+   `uv` for Python,
+   `renv` for R.
+3. Write build instructions in your `README.md`.
+4. Clean up the site.
+
+We grade by cloning your repository and following your own build instructions.
+If the site does not rebuild for us,
+you lose those marks.
+
+It is week 4.
+These steps say what has to exist,
+not which button to click.
+
+Lectures this milestone draws on:
+
+- [RStudio Projects and Literate Programming](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/rstudio-projects-notebooks.html)
+- [Virtual Environments: Python and uv](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/virtual-environments-uv.html)
+- [Virtual Environments: R and renv](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/virtual-environments-renv.html)
+- [Organization of Data Science Projects](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/regex-filenames-project-organization.html)
+
+## What counts as a computational post
+
+The numbers and figures on the page were produced by code that ran at render time.
+Not a screenshot of a plot.
+
+Each post needs:
+
+- A dataset.
+- A line saying **where the data came from**, with a link.
+- At least **three code chunks that do real work**.
+  `library()` calls do not count.
+- At least **one figure or table** your code generated.
+- Prose saying what you did and what you found.
+- Code **and** output visible on the rendered page.
+
+There is no upper limit.
+Write as much as you want.
+
+The two posts can be the same analysis done twice,
+or two different analyses.
+Either is fine.
+What we check is that each post is real work in that language.
+
+## Picking a topic and a dataset
+
+We are not giving you a dataset or a question.
+Finding data,
+working out what it supports,
+and telling a story with it is the job.
+This is a small, cheap place to do that whole loop yourself.
+
+You are marked on whether it runs,
+whether we can rebuild it,
+and whether a reader can follow it.
+Not on how clever the analysis is.
+
+### Use any dataset you like
+
+A dataset that ships in a package is the easy route.
+The licensing is settled,
+and `uv sync` or `renv::restore()` brings the data along with the package.
+
+- R: `palmerpenguins`, `gapminder`, or built-ins like `mtcars` and `iris`.
+- Python: `palmerpenguins`, or `scikit-learn`'s bundled `load_*` datasets.
+
+Nothing that needs a login,
+an API key,
+or a token.
+This is a public repository.
+
+:::{.callout-note}
+## Not every "built-in" dataset is built in
+
+`seaborn.load_dataset()` downloads from the internet on every call.
+If it needs the network,
+treat it as a URL,
+not as a package dataset.
+:::
+
+### Say where it came from
+
+The source goes in the post itself,
+with a link.
+Not only in your `README.md` or a code comment.
+
+```markdown
+Data: [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/),
+Palmer Station Antarctica LTER.
+```
+
+Name the licence if it has one.
+Cite it the way it asks to be cited.
+
+### Check that you are allowed to republish it
+
+Committing a data file to a public repository is publishing it.
+Free to download does not mean free to redistribute.
+
+Before you commit a data file,
+find its licence or terms of use and check that redistribution is allowed.
+CC0, CC BY, and most open government licences allow it, usually with attribution.
+If you cannot find a licence,
+assume you do not have permission.
+
+If you cannot republish it, either:
+
+1. Pick a different dataset, or
+2. Read it from its URL at render time instead of committing the file.
+   Your site then only rebuilds while that host is up,
+   so say so in your `README.md`.
+
+### Keep it small
+
+Committed data files stay under about 5 MB.
+If your dataset is bigger,
+commit a sample and say in the post how you sampled it.
+You wait for every render too.
+
+## Where the environment files go
+
+Both environments live at the **top level of the repository**,
+next to `_quarto.yml`.
+Not inside `posts`,
+and not one per post.
+
+```
+username.github.io/
+├── _quarto.yml
+├── README.md
+├── index.qmd
+├── about.qmd
+├── blog.qmd
+├── pyproject.toml        <- uv
+├── uv.lock               <- uv
+├── .python-version       <- uv
+├── renv.lock             <- renv
+├── .Rprofile             <- renv
+├── renv/                 <- renv
+├── posts/
+└── docs/
+```
+
+Your data file can sit in the same folder as the post that uses it.
+Quarto runs a code chunk with the working directory set to that post's folder,
+so `read_csv("penguins.csv")` finds a file next to `index.qmd`.
+
+Always run `quarto render` from the top level.
+That is how R finds `.Rprofile` and turns `renv` on.
+
+## Step 1: Plan the two posts
+
+Pick your topics and datasets before you install anything.
+Do the licence check now,
+while you still have time to change your mind.
+
+Each post gets its own folder, as in Milestone 2:
+
+```
+posts/<short-name>/index.qmd
+```
+
+Lowercase, hyphens, no spaces.
+See the
+[naming guidelines](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/regex-filenames-project-organization.html#three-principles-for-file-names).
+
+## Step 2: Set up the Python environment
+
+Textbook:
+[Creating a project](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/virtual-environments-uv.html#creating-a-project) ·
+[Adding packages](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/virtual-environments-uv.html#adding-packages) ·
+[The two files that matter](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/virtual-environments-uv.html#the-two-files-that-matter)
+
+From the top level:
+
+```bash
+uv init --bare
+uv python pin 3.14
+uv add jupyter ipykernel
+```
+
+Then `uv add` what your post needs, such as `pandas` or `altair`.
+
+`jupyter` and `ipykernel` are required.
+Quarto runs Python chunks through a Jupyter kernel,
+and the kernel has to be in this project's environment.
+
+Render with `uv run` so Quarto uses the project's `.venv`:
+
+```bash
+uv run quarto render
+```
+
+To confirm,
+print `sys.executable` in a chunk.
+The path should end in `.venv/bin/python` inside your repository.
+If it does not,
+you rendered without `uv run`.
+
+:::{.callout-tip}
+## If Python keeps using the wrong environment
+
+```bash
+rm -r .quarto
+uv run quarto render
+```
+:::
+
+## Step 3: Set up the R environment
+
+Textbook:
+[R environments](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/virtual-environments-renv.html#r-environments) ·
+[Environment files](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/virtual-environments-renv.html#environment-files) ·
+[Snapshot packages](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/virtual-environments-renv.html#snapshot-packages)
+
+From an R session started at the top level:
+
+```r
+renv::init()
+```
+
+That creates `.Rprofile`, `renv/`, and `renv.lock`.
+Install what your post needs,
+then:
+
+```r
+renv::snapshot()
+```
+
+Open `renv.lock` and confirm your packages are in it.
+`renv` finds dependencies by reading your files for `library()` calls,
+so a package you only loaded in the console will be missing.
+
+You do not activate anything by hand.
+Running `quarto render` from the top level starts R there,
+which reads `.Rprofile` and turns `renv` on.
+
+:::{.callout-warning}
+## Commit `renv.lock`, not your R library
+
+`renv` writes its own `renv/.gitignore` that keeps `renv/library` out of Git.
+Leave it alone.
+What belongs on GitHub is `renv.lock`, `.Rprofile`, and `renv/activate.R`.
+:::
+
+## Step 4: Write the two posts
+
+Each post needs everything in
+[What counts as a computational post](#what-counts-as-a-computational-post).
+
+Give each one a YAML header with `title`, `author`, and `date`, as in Milestone 2.
+They show up on `blog.qmd` on their own.
+
+### Use chunk options on purpose
+
+Textbook:
+[Code chunk options](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/rstudio-projects-notebooks.html#code-chunk-options)
+
+Use the Quarto `#|` style,
+not inline `{r, echo=FALSE}`.
+Across the two posts we want:
+
+1. A figure with a label and a caption:
+
+   ```r
+   #| label: fig-penguin-mass
+   #| fig-cap: "Body mass of penguins by species."
+   ```
+
+2. A chunk that quiets something on purpose,
+   such as a setup chunk:
+
+   ```r
+   #| message: false
+   #| warning: false
+   ```
+
+3. Your analysis code visible on the page.
+
+`echo: false` everywhere hides the thing we are grading.
+Hide the noise,
+show the work.
+
+## Step 5: Lock what you actually used
+
+You installed something while writing that is not in a lockfile yet.
+
+```bash
+uv sync
+```
+
+```r
+renv::snapshot()
+```
+
+Check that `uv.lock` lists every package your Python post imports,
+and `renv.lock` every package your R post loads.
+One missing package is a site we cannot rebuild.
+
+## Step 6: Write the build instructions
+
+Your `README.md` is a deliverable this week.
+Write it for somebody who has your repository and nothing else.
+
+Cover:
+
+1. **What this repository is.**
+   One or two sentences.
+2. **What to install first,**
+   with the versions you used.
+   Quarto, `uv`, and R at minimum.
+   `renv` bootstraps itself.
+3. **The exact commands, in order,**
+   from `git clone` to a built site.
+   Copy-pasteable, shell and R, saying where each one is run.
+4. **Where the built site lands** and how to open it locally.
+5. **Where the data comes from,**
+   and whether the build needs the network to fetch it.
+
+Then test it:
+
+```bash
+# this will clone into another directory and name you specify
+git clone git@github.com:username/username.github.io.git ~/tmp/m3-test
+cd ~/tmp/m3-test
+```
+
+Follow your own README line by line,
+without fixing anything from memory.
+Anything you have to guess at is a line missing from your README.
+
+## Step 7: Clean up the site
+
+On the **live site**, not your local preview:
+
+- Every navbar link works.
+- Every image loads.
+- The blog listing shows all your posts, newest first.
+- No broken internal links.
+- No leftover template text,
+  such as Quarto's starter "About this site".
+- Your home and about pages still read well.
+
+On github.com:
+
+- `docs/.nojekyll` is there.
+- `.quarto`, `_site`, `.DS_Store`, `.venv`, and `renv/library` are not.
+- The repository is still **Public**.
+
+You learned ignore files in Week 3.
+Add a `.gitignore` at the top level with
+`.quarto/`, `_site/`, `.DS_Store`, and `.venv/`.
+Textbook:
+[Create a `.gitignore` file](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/git-history-merge-conflicts-stash.html#create-a-gitignore-file).
+
+:::{.callout-warning}
+## Ignoring does not untrack
+
+If `.venv` is already on GitHub,
+adding it to `.gitignore` changes nothing:
+
+```bash
+git rm -r --cached .venv
+git commit -m "stop tracking the virtual environment"
+git push origin main
+```
+:::
+
+## Step 8: Render, commit, push, and check
+
+From the top level:
+
+```bash
+uv run quarto render
+git status
+git add .
+git commit -m "milestone 3"
+git push origin main
+```
+
+Wait for GitHub to build,
+then open `https://username.github.io` in a private window
+and click through both posts.
+Both render,
+code and output are visible,
+figures appear with their captions.
+
+Commit as you go, not once at the end.
+We expect at least five commits.
+
+## Step 9: Submit
+
+A PDF with two URLs:
+
+1. `https://github.com/username/username.github.io`
+2. `https://username.github.io`
+
+Upload it to Gradescope.
+The bonus adds two more things to that PDF.
+See [Submitting the bonus](#submitting-the-bonus).
+
+## Bonus: R and Python in one post
+
+Worth **5 marks**.
+
+Write a **third** post that runs R and Python in the same document
+and passes an object between them.
+One page,
+both languages,
+a result computed in one and used in the other.
+
+You choose where the 5 marks go:
+this milestone,
+or any **one other** assignment in this course.
+
+- They are not split.
+  All five land on one assignment.
+- No assignment goes above **100%**,
+  so spending them on something you already aced wastes them.
+- Tell us where to put them when you submit.
+  If you do not say,
+  we apply them here.
+
+The mechanism is `reticulate`.
+A `.qmd` with `{r}` chunks uses the knitr engine,
+and knitr hands `{python}` chunks to `reticulate` in the same session.
+
+What you need to work out:
+
+- Getting `reticulate` into `renv.lock`.
+- Pointing `reticulate` at this project's `.venv`.
+  Try `uv run quarto render` first,
+  and set it explicitly if that picks the wrong Python.
+- `py$name` reads a Python object from R,
+  and `r.name` reads an R object from Python.
+
+References:
+
+- [Quarto: Using Python, the knitr engine](https://quarto.org/docs/computations/python.html#knitr-engine)
+- [reticulate: Calling Python from R](https://rstudio.github.io/reticulate/articles/calling_python.html)
+- [reticulate: Python version configuration](https://rstudio.github.io/reticulate/articles/versions.html)
+
+The bonus counts only if the post renders
+when we follow your README from a clean clone.
+
+### Submitting the bonus
+
+We do not go hunting for it.
+Add both of these to your Gradescope PDF:
+
+1. **A separate URL** that opens the bonus post itself,
+   such as `https://username.github.io/posts/r-and-python/`.
+   Not the repository,
+   not the home page.
+2. **One line naming the assignment the 5 marks go to,**
+   for example "Apply the bonus to Milestone 2."
+
+## Before you submit, check
+
+- [ ] Two new posts, one Quarto with R, one Quarto with Python.
+- [ ] Each post has at least three working code chunks and a figure or table.
+- [ ] Each post says where its data came from, with a link.
+- [ ] You checked the licence for any data file you committed.
+- [ ] Committed data files are under about 5 MB.
+- [ ] Code and output are both visible on the live site.
+- [ ] At least one figure has a label and a caption.
+- [ ] At least one chunk uses `message` or `warning` on purpose.
+- [ ] Chunk options use the `#|` style.
+- [ ] `pyproject.toml`, `uv.lock`, and `.python-version` are on github.com.
+- [ ] `renv.lock`, `.Rprofile`, and `renv/activate.R` are on github.com.
+- [ ] Both lockfiles list every package your posts use.
+- [ ] `README.md` has build instructions, tested from a fresh clone.
+- [ ] Every navbar link and image works on the live site.
+- [ ] The blog listing shows every post.
+- [ ] No template placeholder text is left anywhere.
+- [ ] `docs/.nojekyll` is on github.com.
+- [ ] `.quarto`, `_site`, `.DS_Store`, `.venv`, `renv/library` are not on github.com.
+- [ ] The repository is still **Public**.
+- [ ] The site is live, checked in a private browser window.
+- [ ] At least five commits.
+- [ ] No tokens, keys, or private information in the repository.
+- [ ] The PDF with both URLs is on Gradescope.
+
+If you did the bonus post:
+
+- [ ] It runs R and Python in one document and passes an object between them.
+- [ ] It renders from a clean clone by following your own README.
+- [ ] The PDF has a **separate URL** that opens the bonus post.
+- [ ] The PDF names the **one** assignment the 5 marks go to.
+
+## Grading
+
+| Item                                                                            | Marks  |
+|----------------------------------------------------------------------------------|--------|
+| Python post: real analysis, code and output on the live site, data source documented | 7  |
+| R post: real analysis, code and output on the live site, data source documented  | 7      |
+| Chunk options used on purpose in both posts                                      | 3      |
+| Python environment: `pyproject.toml`, `uv.lock`, `.python-version`, complete      | 4      |
+| R environment: `renv.lock`, `.Rprofile`, `renv/activate.R`, complete             | 4      |
+| `README.md` build instructions we can follow from a clean clone                  | 6      |
+| Site cleanup: navigation, links, images, no leftover placeholder text            | 2      |
+| Site live on GitHub Pages, at least five commits, both URLs on Gradescope         | 2      |
+| **Total**                                                                        | **35** |
+
+| Bonus                                                                            | Marks  |
+|----------------------------------------------------------------------------------|--------|
+| A third post that runs R and Python together and passes an object between them   | +5     |
+
+The 5 bonus marks go to this milestone or to any one other assignment in this course,
+whichever you name when you submit.
+They are not split,
+and no assignment goes above 100%.
+
+## If you get stuck
+
+Textbook: [Asking Effective Questions](https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/asking-questions.html)
+
+Ask in the `521_platforms-dsci` Slack channel or come to office hours.
+Post the command you ran and the error message you got,
+not just "it did not work".
