@@ -1260,7 +1260,7 @@ shuffle_answers: true
 <p><a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/regex-filenames-project-organization.html#three-principles-for-file-names">Filenames section</a></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Machine readable.</strong> No spaces, no punctuation beyond <code>-</code> and <code>_</code>, one delimiter for fields and another inside them. Then <code>ls *_report.csv</code> finds them, and so does a pattern search later in the week.</p>
+<p><strong>Machine readable.</strong> No spaces and punctuation beyond <code>_</code> and <code>-</code>: delimiter for fields and another inside dates. Then <code>ls *_report.csv</code> finds them, and so does a pattern search.</p>
 <p><strong>Human readable.</strong> The name says what is in the file. <code>2026-09-22_penguins-by-island.csv</code> tells you; <code>final2_REAL.csv</code> does not.</p>
 <p><strong>Sorts the way you want by default.</strong> Dates as <code>YYYY-MM-DD</code>, numbers padded with zeros: <code>fig-01</code>, <code>fig-02</code>, … <code>fig-10</code>. Otherwise <code>fig-10</code> sorts before <code>fig-2</code>.</p>
 </div><div class="column" style="width:50%;">
@@ -1274,7 +1274,8 @@ shuffle_answers: true
 2026-09-08_penguins_raw.csv
 2026-09-15_penguins_clean.csv</pre>
 </div>
-<p>The glob works because the fields are in fixed positions and the delimiters are consistent. That is what “machine readable” buys you.</p>
+<p>The glob works because the fields are in fixed positions and the delimiters are consistent. That is what “machine readable” means.</p>
+<p>Extended pattern matching in terminal and programming languages allowing us to do more complex things is supported by <a href="https://ubc-mds.github.io/DSCI_521_platforms-dsci_book/lectures/regex.html">regular expressions (RegEx)</a></p>
 </div></div>
 </section>
 <section id="which-of-these-do-you-want-to-deal-with-at-3-a.m.-before-the-deadline" class="slide level2 smaller ask">
