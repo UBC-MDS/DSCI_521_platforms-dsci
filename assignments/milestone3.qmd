@@ -213,7 +213,7 @@ uv run quarto render
 
 To confirm,
 print `sys.executable` in a chunk.
-The path should end in `.venv/bin/python` inside your repository.
+The path should end in `.venv/bin/python` (might be `.venv/Scripts/python` on Windows) inside your repository.
 If it does not,
 you rendered without `uv run`.
 
